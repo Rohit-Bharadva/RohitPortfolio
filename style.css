@@ -447,12 +447,6 @@ article.product p {
   }
 }
 
-@media (max-width: 768px) {
-  article.product {
-    box-shadow: 0 8px 28px -4px #07ecc2, 0 2px 8px 0 #00000040;
-  }
-}
-
 
 /* Product Demo (now Skills/Call to Action) */
 .demo-section {
@@ -511,11 +505,7 @@ article.product p {
   border-radius: 0.5rem;
   filter: drop-shadow(0 0 20px #0000006b);
 }
-@media (max-width: 768px) {
-  .demo-section {
-    padding-top: 0;
-  }
-}
+
 /* Material section (now Why Choose Me/Technologies) */
 .material-section {
   background-color: transparent; /* Inherits the body background */
@@ -615,11 +605,7 @@ article.product p {
     text-align: left;
   }
 }
-@media (max-width: 768px) {
-  .material-section {
-    padding-top: 0;
-  }
-}
+
 /* --- Footer --- */
 footer {
   background-color: #000000; /* Pure black footer */
