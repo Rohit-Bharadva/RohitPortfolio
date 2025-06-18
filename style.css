@@ -15,7 +15,8 @@ body {
     transparent 70% /* Fade to transparent, adjust percentage to control spread */
   );
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Keep gradient fixed even on scroll */
+  background-attachment: scroll; /* CHANGE THIS FROM 'fixed' to 'scroll' */
+  /* You can even remove background-attachment entirely as 'scroll' is the default value */
   background-size: 100% 100%; /* Ensure it covers the whole area */
   /* ------------------------------------------ */
 
