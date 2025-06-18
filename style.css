@@ -504,7 +504,11 @@ article.product p {
   border-radius: 0.5rem;
   filter: drop-shadow(0 0 20px #0000006b);
 }
-
+@media (max-width: 768px) {
+  .demo-section {
+    padding-top: 0;
+  }
+}
 /* Material section (now Why Choose Me/Technologies) */
 .material-section {
   background-color: transparent; /* Inherits the body background */
@@ -604,7 +608,11 @@ article.product p {
     text-align: left;
   }
 }
-
+@media (max-width: 768px) {
+  .material-section {
+    padding-top: 0;
+  }
+}
 /* --- Footer --- */
 footer {
   background-color: #000000; /* Pure black footer */
