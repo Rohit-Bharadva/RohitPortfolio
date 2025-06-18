@@ -2,7 +2,7 @@
 
 A modern, responsive, and professional developer portfolio to showcase my skills, experience, and featured projects — designed with clean UI, smooth UX, and performance in mind.
 
-![Screenshot](images/Rohit Bharadva.png)
+![Screenshot](images/RohitBharadva.png)
 
 ---
 
