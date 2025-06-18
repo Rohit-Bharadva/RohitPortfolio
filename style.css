@@ -447,6 +447,13 @@ article.product p {
   }
 }
 
+@media (max-width: 768px) {
+  article.product {
+    box-shadow: 0 8px 28px -4px #07ecc2, 0 2px 8px 0 #00000040;
+  }
+}
+
+
 /* Product Demo (now Skills/Call to Action) */
 .demo-section {
   background-color: transparent; /* Inherits the body background */
