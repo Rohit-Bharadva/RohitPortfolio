@@ -1,259 +1,235 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Rohit B. - Frontend Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="images/jariwala.png" />
-    </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Bharadva - UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/R Logo.png">
+</head>
+
+<body>
+
+    <!-- ========================= HEADER ========================= -->
     <header>
-      <div class="container">
-        <a href="index.html"><h1>Rohit B.</h1></a>
-        <button class="hamburger-menu" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <nav class="main-nav">
-          <a class="active" href="index.html">Home</a>
-          <a href="AboutMe.html">About Me</a>
-          <a href="Projects.html">Projects</a>
-          <a href="Contact.html">Contact</a>
-        </nav>
-      </div>
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html">
+                    <h1>Rohit Bharadva</h1>
+            </a>
+            </div>
+
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <a href="AboutMe.html">About Me</a>
+                <a href="Projects.html">Work</a>
+                <a href="Contact.html" class="contact-btn">Contact Me</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- ========================= HERO SECTION ========================= -->
     <section class="hero-section container">
-      <div class="hero-text-content">
-        <h1>
-          Hi, I'm
-            <span style="background: linear-gradient(90deg, #4f78d7 0%, #07ecc2 100%);
-                   -webkit-background-clip: text;
-                   -webkit-text-fill-color: transparent;
-                   background-clip: text;">
-            Rohit Bharadva
-            </span>
-        </h1>
-        <p>
-          A passionate <b>Frontend Developer</b> crafting engaging and user-friendly web experiences.
-          I specialize in building responsive, accessible, and high-performance websites.
-        </p>
-        <p>
-          Explore my portfolio to see my latest projects and learn more about my skills.
-        </p>
-        <button onclick="location.href='projects.html'">View My Work</button>
-        </div>
-      <div class="hero-image">
-        <img
-          alt="Illustration of a frontend developer working on a laptop"
-          src="images/ChatGPT Image Jun 13, 2025, 05_12_55 PM.png"
-        />
-        </div>
-    </section>
+        <div class="hero-content">
 
-    <section class="products-section">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="products-container">
-          <article class="product">
-            <a href="Projects.html">
-              <img
-                alt="Thumbnail of Project 1"
-                src="images/Project1.png"
-              />
-              </a>
-            <h3>Prevail</h3>
-            <p>
-              Service Providing Website for a local business, showcasing their services and contact information.
-            </p>
-            <button onclick="location.href='Projects.html'">View Project</button>
-          </article>
+           <div class="hero-profile">
 
-          <article class="product">
-            <a href="Projects.html">
-              <img
-                alt="Thumbnail of Project 2"
-                src="images/Project4.png"
-              />
-              </a>
-            <h3>SaaS Application</h3>
-            <p>
-              A Software as a Service (SaaS) application providing a platform for users to manage their tasks efficiently.
-            </p>
-            <button onclick="location.href='Projects.html'">View Project</button>
-          </article>
+              <div class="hero-img">
+                  <img src="images/Hero_image3.jpg" alt="Rohit Bharadva">
+              </div>
 
-          <article class="product">
-            <a href="Projects.html">
-              <img
-                alt="Thumbnail of Project 3"
-                src="images/Project5.png"
-              />
-              </a>
-            <h3>Ecommerce Website</h3>
-            <p>
-              selling cloths and accessories, featuring product listings, a shopping cart, and checkout functionality.
-            </p>
-            <button onclick="location.href='Projects.html'">View Project</button>
-          </article>
-        </div>
-      </div>
-    </section>
+              <div class="hero-info">
+                  <h3 class="hero-name">Rohit Bharadva</h3>
 
-    <section class="demo-section container">
-      <div class="demo-text-content">
-        <h1>My Expertise & Skills</h1>
-        <p>
-          I'm proficient in HTML5, CSS3 (Sass/SCSS), JavaScript (ES6+), and modern frameworks like React.
-          I'm dedicated to writing clean, maintainable, and efficient code.
-        </p>
-        <p>
-          I also have experience with responsive design, version control (Git), and basic UI/UX principles.
-          Let's build something amazing together!
-        </p>
-        <button onclick="location.href='contact.html'">Get in Touch</button>
-        </div>
-      <div class="demo-image">
-        <img
-          alt="Image representing coding or web development tools"
-          src="images/ChatGPT Image Jun 13, 2025, 05_47_26 PM.png"
-        />
-        </div>
-    </section>
+                  <a href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" target="_blank" class="linkedin-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#FFFFFF" role="img" aria-label="LinkedIn" focusable="false">
+                        <title>LinkedIn</title>
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.849-3.037-1.849 0-2.132 1.445-2.132 2.939v5.667H9.357V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.369-1.849 3.602 0 4.268 2.371 4.268 5.456v6.284zM5.337 7.433c-1.144 0-2.069-.925-2.069-2.068 0-1.144.925-2.069 2.069-2.069s2.068.925 2.068 2.069c0 1.143-.924 2.068-2.068 2.068zM6.995 20.452H3.678V9h3.317v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.225.792 24 1.771 24h20.451C23.2 24 24 23.225 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                      </svg>
+                  </a>
+              </div>
 
-    <section class="material-section">
-      <div class="container">
-        <div class="text-content">
-          <h1>Why Choose Me?</h1>
-          <p>
-            • Clean Code & Best Practices: I write well-structured, semantic, and efficient code.
-          </p>
-          <p>
-            • Responsive Design: Ensuring your website looks great on any device.
-          </p>
-          <p>
-            • Problem-Solving: I enjoy tackling complex challenges and finding effective solutions.
-          </p>
-          <p>
-            • Continuous Learning: Always staying updated with the latest web technologies.
-          </p>
-        </div>
-        <div class="product-grid">
-          <img
-            src="images/html.svg"
-            alt="HTML5 Logo"
-            title="HTML5"
-          />
-          <img
-            src="images/css.svg"
-            alt="CSS3 Logo"
-            title="CSS3"
-          />
-          <img
-            src="images/js.svg"
-            alt="JavaScript Logo"
-            title="JavaScript"
-          />
-          <img
-            src="images/react.svg"
-            alt="React Logo"
-            title="React"
-          />
           </div>
-      </div>
+
+
+
+            <h1>
+                I'm Rohit, a UI/UX Designer and developer specializing in building
+                intuitive, human-centered experiences.
+            </h1>
+
+            <p>
+                I specialize in creating visually stunning, user-friendly experiences
+                that deliver measurable results and drive business growth.
+            </p>
+            
+            <a href="Contact.html" class="primary-btn">
+                Let’s Build Together
+            </a>
+        </div>
     </section>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Connect with Me</h3>
-          <p>
-            Surat, Gujarat <br />
-            India
-          </p>
-          <p>Email: rohitbharadava15@gmail.com</p>
-          <p>Phone: +91 9586375340</p>
+    <!-- ========================= CASE STUDIES ========================= -->
+    <section class="case-studies container">
+        <h2>Case Studies</h2>
+
+        <div class="projects-grid">
+
+            <article class="project-card" onclick="location.href='Projects.html';">
+                <div class="project-inner">
+                    <div class="project-image-wrapper">
+                        <img src="images/Moris.png" alt="Terra Goods Interface">
+                </div>
+                <div class="card-text">
+                    <h3>Moris - Clothing Brand</h3>
+                    <p>
+                        An online boutique designed to help women discover trending styles through a chic and curated collection.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="project-card" onclick="location.href='Projects.html';">
+                <div class="project-inner">
+                    <div class="project-image-wrapper">
+                        <img src="images/Ovenza-Desktop.png" alt="Terra Goods Interface">
+                </div>
+                <div class="card-text">
+                    <h3>Ovenza - Food Brand</h3>
+                    <p>
+                        From crispy snacks to sweet endings, complete your meal with our wide range of sides and beverages.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card" onclick="location.href='Projects.html';">
+                <div class="project-inner">
+                    <div class="project-image-wrapper">
+                        <img src="images/EmFit S2.png" alt="Terra Goods Interface">
+                </div>
+                <div class="card-text">
+                    <h3>EmFit - Smart Connect</h3>
+                    <p>
+                        A companion app that syncs your EmFit smartwatch for real‑time health tracking, sleep insights, and seamless device control.
+                    </p>
+                </div>
+            </article>
+
         </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="Projects.html">My Projects</a></li>
-            <li><a href="AboutMe.html">About Me</a></li>
-            <li><a href="res/Rohit CV1.pdf" download>Resume</a></li>
-          </ul>
+    </section>
+
+    <!-- ========================= SKILLS SECTION ========================= -->
+    <section class="skills-section container">
+        <h2>Skills/Tools</h2>
+
+        <div class="skills-intro">
+            <p>
+                I focus on creating intuitive and engaging interfaces by deeply understanding user needs.
+                My process involves research, wireframing, and prototyping to ensure a seamless and
+                enjoyable user journey from start to finish.
+            </p>
         </div>
-        <div class="footer-section">
-          <h3>Follow Me</h3>
-          <div class="social-icons">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" title="LinkedIn">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764c0 .974-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                ></path>
-              </svg>
-            </a>
-            <a aria-label="GitHub" href="https://github.com/Rohit-Bharadva" title="GitHub">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.25.82-.557 0-.274-.009-.998-.014-1.956-3.337.724-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.492.998.108-.77.422-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.124-.3-.535-1.52.117-3.176 0 0 1-.322 3.296 1.233.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.296-1.555 3.293-1.233 3.293-1.233.653 1.656.242 2.876.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.806 5.624-5.478 5.921.429.37.811 1.101.811 2.222 0 1.606-.015 2.895-.015 3.286 0 .309.21.678.825.557C20.565 21.808 24 17.302 24 12c0-6.627-5.373-12-12-12z"
-                ></path>
-              </svg>
-            </a>
-          </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="icon-box"><img src="images/figma 1.png" alt="Figma"></div>
+                <span>Figma</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon-box"><img src="images/research 1.png" alt="Research"></div>
+                <span>Research</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon-box"><img src="images/web-layout 1.png" alt="Wireframing"></div>
+                <span>Wireframing</span>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon-box"><img src="images/prototype (1) 1.png" alt="Prototyping"></div>
+                <span>Prototyping</span>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; <span id="current-year"></span> Rohit B. All rights reserved.
-      </div>
-    </footer>
+    </section>
+
+    <!-- ========================= CTA SECTION ========================= -->
+    <section class="bottom-cta container">
+        <h2>Let’s Create Something Great Together!</h2>
+
+        <div class="contact-details">
+            <div class="contact-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22 6 12 13 2 6"/>
+                </svg>
+                <span>rohitbharadava15@gmail.com</span>
+            </div>
+
+            <div class="contact-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2.08A15.94 15.94 0 0 1 3 5.1a2 2 0 0 1 2.09-2.18h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a13.07 13.07 0 0 0 5.66 5.66l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7a2 2 0 0 1 1.72 2z"/>
+                </svg>
+                <span>+91 9586375340</span>
+            </div>
+        </div>
+
+        <button class="footer-cta-btn">
+            Let’s create designs that not only look good but work smart.
+        </button>
+    </section>
+
+    <footer></footer>
+
+    <!-- ========================= MOBILE MENU SCRIPT ========================= -->
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const hamburger = document.querySelector('.hamburger-menu');
-        const mainNav = document.querySelector('.main-nav');
-        const header = document.querySelector('header');
+        // 1. Mobile Menu Logic
+        const hamburger = document.querySelector(".hamburger-menu");
+        const nav = document.querySelector(".main-nav");
 
-        if (hamburger && mainNav && header) {
-          hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('active');
-            mainNav.classList.toggle('active');
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
 
-            const headerHeight = header.offsetHeight;
-            mainNav.style.top = `${headerHeight}px`;
-          });
+        // 2. Scroll Animation Logic (Intersection Observer)
+        // Select elements we want to animate on scroll
+        const revealElements = document.querySelectorAll(".project-card, .skill-card, .skills-intro p, section h2, .bottom-cta");
 
-          mainNav.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => {
-              hamburger.classList.remove('active');
-              mainNav.classList.remove('active');
+        // Add the 'reveal' class to these elements initially via JS
+        // so if JS fails, they are still visible by default (progressive enhancement)
+        revealElements.forEach(el => el.classList.add('reveal'));
+
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits the bottom
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add a slight delay based on index for staggered grid effect
+                    setTimeout(() => {
+                        entry.target.classList.add("active");
+                    }, index * 100); // 100ms delay between items if they appear together
+                    
+                    observer.unobserve(entry.target); // Stop watching once revealed
+                }
             });
-          });
-        }
+        }, observerOptions);
 
-        // Set current year dynamically for footer
-        const currentYear = new Date().getFullYear();
-        const yearElement = document.getElementById('current-year');
-        if (yearElement) {
-          yearElement.textContent = currentYear;
-        }
-      });
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
     </script>
-  </body>
+
+
+</body>
+
 </html>
