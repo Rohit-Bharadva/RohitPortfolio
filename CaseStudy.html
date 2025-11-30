@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study - Rohit Bharadva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="CaseStudy.css">
+        
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <a href="index.html"><h1>Rohit Bharadva</h1></a>
+            </div>
+            <button class="hamburger-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <nav class="main-nav">
+                <a href="AboutMe.html">About Me</a>
+                <a href="Projects.html">Work</a>
+                <a href="Contact.html" class="contact-btn">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================================
+         PROJECT 1: MORIS (Fashion E-commerce)
+    ======================================================== -->
+    <div id="moris-content" class="project-content">
+        <section class="hero-container">
+            <span class="badge">E-Commerce Design</span>
+            <h1 class="reveal">Redefining Digital Luxury for <span class="text-moris">Moris</span></h1>
+            <p class="subtitle reveal">Bridging the gap between high-fashion editorial and seamless e-commerce utility.</p>
+            
+            <div class="project-meta reveal">
+                <div class="meta-item"><h4>Role</h4><p>UI/UX Designer</p></div>
+                <div class="meta-item"><h4>Timeline</h4><p>2 Weeks</p></div>
+                <div class="meta-item"><h4>Tools</h4><p>Figma</p></div>
+                <div class="meta-item"><h4>Outcome</h4><p>High-Fidelity Prototype</p></div>
+            </div>
+
+            <div class="hero-image-container reveal">
+                <img src="MorisDesktop.png" loading="lazy" onerror="this.onerror=null; this.src='images/MorisDesktop.png'" alt="Moris Desktop Interface">
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">The Challenge</h2>
+            <p>Moris is a boutique fashion brand known for its craftsmanship. However, their digital presence was cluttered, resembling a generic marketplace rather than a luxury house. This led to a high bounce rate on mobile devices where the "premium feel" was lost.</p>
+            <p><strong>My Goal:</strong> Create a digital experience that feels like walking into a high-end store—minimalist, spacious, and focused on the product details—while ensuring the checkout process remains frictionless.</p>
+        </section>
+
+        <!-- Design System Showcase (Frame 1 - Amber) -->
+        <section class="design-system-container reveal">
+            <div class="design-system">
+                <h2 class="section-title" style="margin-bottom: 40px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #555;">Design Language</h2>
+                <div class="ds-grid">
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Typography</h4>
+                        <div class="typography-preview" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <h5>Aa</h5>
+                            <span>Plus Jakarta Sans (Headings)</span>
+                        </div>
+                        <div class="typography-preview" style="font-family: 'Plus Jakarta Sans', sans-serif; margin-top: 24px;">
+                            <h5 style="font-size: 32px;">Aa</h5>
+                            <span>Plus Jakarta Sans (Body)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Color Palette (Amber Series)</h4>
+                        <div class="color-palette">
+                            <!-- Frame 1 Colors -->
+                            <div class="swatch" style="background: #FDE68A;" title="Amber 100"></div>
+                            <div class="swatch" style="background: #FBBF24;" title="Amber 300"></div>
+                            <div class="swatch" style="background: #D97706;" title="Amber 500"></div>
+                            <div class="swatch" style="background: #B45309;" title="Amber 600"></div>
+                            <div class="swatch" style="background: #000000;" title="Black"></div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 14px; color: #666;">Warm Amber tones to evoke luxury and natural fabrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">The Solution</h2>
+            <p>I adopted a <strong>"Content-First"</strong> approach. By removing heavy borders and unnecessary UI elements, I let the photography speak for itself.</p>
+            <ul>
+                <p style="color:#ccc; margin-bottom: 10px;"><strong>Sticky Navigation:</strong> Keeps cart and menu accessible without blocking content.</p>
+                <p style="color:#ccc; margin-bottom: 10px;"><strong>Visual Hierarchy:</strong> Using serif fonts for emotional headers and sans-serif for functional data (price, size).</p>
+            </ul>
+        </section>
+
+        <!-- Combined Device Showcase -->
+        <section class="grid-container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Responsive Adaptation</h2>
+            <div class="device-combo-container">
+                <!-- Tablet -->
+                <div class="tablet-showcase">
+                    <img src="MorisTab.png" loading="lazy" onerror="this.onerror=null; this.src='images/MorisTab.png'" alt="Moris Tablet">
+                </div>
+                <!-- Mobile -->
+                <div class="mobile-showcase">
+                    <img src="MorisMobile.png" loading="lazy" onerror="this.onerror=null; this.src='images/MorisMobile.png'" alt="Moris Mobile">
+                </div>
+            </div>
+            <p class="caption">Tablet & Mobile Response</p>
+        </section>
+
+        <section class="grid-container next-project reveal">
+            <p>Next Case Study</p>
+            <h2 onclick="location.href='CaseStudy.html?project=ovenza'">Ovenza Pizza &rarr;</h2>
+        </section>
+    </div>
+
+
+    <!-- ========================================================
+         PROJECT 2: OVENZA (Food Delivery)
+    ======================================================== -->
+    <div id="ovenza-content" class="project-content">
+        <section class="hero-container">
+            <span class="badge" style="background: rgba(229, 57, 53, 0.1); color: #ff6b6b;">Food & Beverage</span>
+            <h1 class="reveal">Triggering Appetite with <span class="text-ovenza">Ovenza</span></h1>
+            <p class="subtitle reveal">Designing a visceral ordering experience that converts hunger into orders in under 60 seconds.</p>
+            
+            <div class="project-meta reveal">
+                <div class="meta-item"><h4>Role</h4><p>UI/UX Designer</p></div>
+                <div class="meta-item"><h4>Timeline</h4><p>2 Weeks</p></div>
+                <div class="meta-item"><h4>Tools</h4><p>Figma</p></div>
+                <div class="meta-item"><h4>Focus</h4><p>Conversion Optimization</p></div>
+            </div>
+
+            <div class="hero-image-container reveal">
+                <img src="OvenzaDesktop.png" loading="lazy" onerror="this.onerror=null; this.src='images/OvenzaDesktop.png'" alt="Ovenza Desktop">
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">The Challenge</h2>
+            <p>Most food delivery sites feel transactional and cold. Ovenza wanted to capture the warmth of a brick-oven pizzeria digitally. The challenge was balancing <strong>high-fidelity textures</strong> (to make the user hungry) with <strong>site performance</strong> and a speedy checkout flow.</p>
+        </section>
+
+        <!-- Design System Showcase (Frame 3 - Red) -->
+        <section class="design-system-container reveal">
+            <div class="design-system">
+                <h2 class="section-title" style="margin-bottom: 40px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #555;">Design Language</h2>
+                <div class="ds-grid">
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Typography</h4>
+                        <div class="typography-preview" style="font-family: serif;">
+                            <h5>Aa</h5>
+                            <span>Playfair Display (Headings)</span>
+                        </div>
+                        <div class="typography-preview" style="font-family: 'Plus Jakarta Sans', sans-serif; margin-top: 24px;">
+                            <h5 style="font-size: 32px;">Aa</h5>
+                            <span>Plus Jakarta Sans (Body)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Color Psychology (Red Series)</h4>
+                        <div class="color-palette">
+                            <!-- Frame 3 Colors -->
+                            <div class="swatch" style="background: #FEE2E2;" title="Red 50"></div>
+                            <div class="swatch" style="background: #EF4444;" title="Red 400"></div>
+                            <div class="swatch" style="background: #DC2626;" title="Red 500"></div>
+                            <div class="swatch" style="background: #7F1D1D;" title="Red 900"></div>
+                            <div class="swatch" style="background: #450A0A;" title="Red 950"></div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 14px; color: #666;">Red stimulates appetite; balanced with deep blacks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">Key UX Decisions</h2>
+            <p><strong>1. The "Yum" Factor:</strong> Instead of small thumbnails, I used large, top-down photography with shadows that make the pizza pop off the screen.</p>
+            <p><strong>2. Simplified Customization:</strong> Pizza builders can be tedious. I designed a visual stepper that allows users to toggle toppings on/off visually, making the process gamified rather than a form-filling exercise.</p>
+        </section>
+
+        <!-- Combined Device Showcase -->
+        <section class="grid-container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Ordering Experience</h2>
+            <div class="device-combo-container">
+                <!-- Tablet -->
+                <div class="tablet-showcase">
+                    <img src="OvenzaTab.png" loading="lazy" onerror="this.onerror=null; this.src='images/OvenzaTab.png'" alt="Ovenza Tablet">
+                </div>
+                <!-- Mobile -->
+                <div class="mobile-showcase">
+                    <img src="OvenzaMobile.png" loading="lazy" onerror="this.onerror=null; this.src='images/OvenzaMobile.png'" alt="Ovenza Mobile">
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-container next-project reveal">
+            <p>Next Case Study</p>
+            <h2 onclick="location.href='CaseStudy.html?project=emfit'">EmFit Smart App &rarr;</h2>
+        </section>
+    </div>
+
+
+    <!-- ========================================================
+         PROJECT 3: EMFIT (Health App)
+    ======================================================== -->
+    <div id="emfit-content" class="project-content">
+        <section class="hero-container">
+            <span class="badge" style="background: rgba(0, 230, 153, 0.1); color: #00E699;">Mobile App Design</span>
+            <h1 class="reveal">Simplifying Health Data with <span class="text-emfit">EmFit</span></h1>
+            <p class="subtitle reveal">Transforming complex bio-metrics into actionable, glanceable insights for the everyday athlete.</p>
+            
+            <!-- App Hero Grid -->
+            <div class="app-hero-grid reveal">
+                <div class="app-screen"><img src="EmFit S1.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFit S1.png'" alt="Splash"></div>
+                <div class="app-screen" style="transform: translateY(-20px); z-index: 2;"><img src="EmFit S4.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFit S4.png'" alt="Dashboard"></div>
+                <div class="app-screen"><img src="EmFit S6.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFit S6.png'" alt="Profile"></div>
+            </div>
+
+            <div class="project-meta reveal">
+                <div class="meta-item"><h4>Role</h4><p>UI/UX Designer</p></div>
+                <div class="meta-item"><h4>Timeline</h4><p>2 Weeks</p></div>
+                <div class="meta-item"><h4>Tools</h4><p>Figma</p></div>
+                <div class="meta-item"><h4>Focus</h4><p>Data Visualization</p></div>
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">The Problem</h2>
+            <p>Health apps often suffer from "Data Overload." Users are bombarded with charts, numbers, and notifications, leading to anxiety rather than motivation. EmFit needed a solution that felt powerful yet "quiet"—an app that respects the user's attention.</p>
+        </section>
+
+        <!-- Design System Showcase (Frame 2 - Emerald) -->
+        <section class="design-system-container reveal">
+            <div class="design-system">
+                <h2 class="section-title" style="margin-bottom: 40px; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #555;">Dark Mode Aesthetics</h2>
+                <div class="ds-grid">
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Color Strategy (Emerald Series)</h4>
+                        <div class="color-palette">
+                            <!-- Frame 2 Colors -->
+                            <div class="swatch" style="background: #A7F3D0;" title="Emerald 100"></div>
+                            <div class="swatch" style="background: #34D399;" title="Emerald 400"></div>
+                            <div class="swatch" style="background: #059669;" title="Emerald 500"></div>
+                            <div class="swatch" style="background: #064E3B;" title="Emerald 800"></div>
+                            <div class="swatch" style="background: #022C22;" title="Emerald 950"></div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 14px; color: #666;">High contrast neon on black for outdoor visibility and battery saving.</p>
+                    </div>
+                    <div>
+                        <h4 style="color:#888; margin-bottom:16px;">Iconography</h4>
+                        <p style="color: #ccc; font-size: 14px;">We used rounded, filled iconography to ensure touch targets felt substantial and friendly, avoiding thin lines that disappear in sunlight.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-container text-block reveal">
+            <h2 class="section-title">The Dashboard Solution</h2>
+            <p>I structured the dashboard using a <strong>Card-Based Layout</strong>. This allows users to modularize their view. If "Heart Rate" is more important to a user than "Steps," they can rearrange the priority.</p>
+            <p>Instead of showing raw data tables, we used <strong>Radial Progress Bars</strong>. It allows a user to understand their daily progress (e.g., "75% complete") in a millisecond glance.</p>
+        </section>
+
+        <section class="grid-container reveal" style="margin-bottom: 80px;">
+            <div class="app-hero-grid">
+                <div class="app-screen"><img src="EmFitS2.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFitS2.png'" alt="Login"></div>
+                <div class="app-screen"><img src="EmFit S3.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFit S3.png'" alt="Data Entry"></div>
+                <div class="app-screen"><img src="EmFit S5.png" loading="lazy" onerror="this.onerror=null; this.src='images/EmFit S5.png'" alt="Device"></div>
+            </div>
+            <p class="caption">Onboarding & Device Flow</p>
+        </section>
+
+        <section class="grid-container next-project reveal">
+            <p>Next Case Study</p>
+            <h2 onclick="location.href='CaseStudy.html?project=moris'">Moris Fashion Brand &rarr;</h2>
+        </section>
+    </div>
+
+    
+
+
+    <footer>
+        &copy; <span id="year">2025</span> Rohit Bharadva. All rights reserved.
+    </footer>
+
+    <!-- ========================= SCRIPTS ========================= -->
+    <script>
+        // 1. PROJECT LOADER LOGIC
+        function loadProject() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('project');
+            const validProjects = ['moris', 'ovenza', 'emfit'];
+
+            // Hide all content first
+            document.querySelectorAll('.project-content').forEach(el => el.style.display = 'none');
+
+            if (projectId && validProjects.includes(projectId)) {
+                const targetElement = document.getElementById(projectId + '-content');
+                if(targetElement) targetElement.style.display = 'block';
+                
+                // Update Title
+                const titles = {
+                    'moris': 'Moris Case Study',
+                    'ovenza': 'Ovenza Case Study',
+                    'emfit': 'EmFit Case Study'
+                };
+                document.title = titles[projectId] + " - Rohit Bharadva";
+                
+            } else {
+                // Default to Moris if no ID, or Error if invalid ID
+                if(!projectId) {
+                     document.getElementById('moris-content').style.display = 'block';
+                } else {
+                     document.getElementById('error-content').style.display = 'block';
+                }
+            }
+        }
+
+        // Run on load
+        loadProject();
+
+        // 2. Mobile Menu
+        const hamburger = document.querySelector(".hamburger-menu");
+        const nav = document.querySelector(".main-nav");
+        if(hamburger){
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
+            });
+        }
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // 3. Reveal Animation
+        const revealElements = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Wait for DOM paint
+        setTimeout(() => {
+            document.querySelectorAll(".project-content[style='display: block;'] .reveal").forEach(el => {
+                observer.observe(el);
+            });
+        }, 300);
+
+    </script>
+
+</body>
+</html>
