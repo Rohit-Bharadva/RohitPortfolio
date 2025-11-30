@@ -1,197 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>About Rohit B. - Frontend Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="AboutMe.css" />
-    <link rel="icon" type="image/x-icon" href="images/" />
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Rohit Bharadva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="AboutMe.css">
+</head>
+
+<body>
+
+    <!-- ========================= HEADER ========================= -->
     <header>
-      <div class="container">
-        <a href="index.html"><h1>Rohit B.</h1></a>
-        <button class="hamburger-menu" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <nav class="main-nav">
-          <a href="index.html">Home</a>
-          <a class="active" href="AboutMe.html">About Me</a>
-          <a href="Projects.html">Projects</a>
-          <a href="Contact.html">Contact</a>
-        </nav>
-      </div>
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html"> <!-- Link to index.html in real project -->
+                    <h1>Rohit Bharadva</h1>
+                </a>
+            </div>
+
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="main-nav">
+                <a href="AboutMe.html" class="active">About Me</a> <!-- Active class added -->
+                <a href="Projects.html">Work</a>
+                <a href="Contact.html" class="contact-btn">Contact Me</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <section class="about-hero-section container">
-        <div class="about-intro-wrapper">
-          <div class="about-text-left">
-            <h1>
-              Hi, I'm
-              <span
-                style="
-                  background: linear-gradient(90deg, #4f78d7 0%, #07ecc2 100%);
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                  background-clip: text;
-                "
-              >
-                Rohit Bharadva
-              </span>
-            </h1>
-            <p class="about-subtitle">Frontend Developer</p>
-          </div>
-        </div>
-      </section>
+    <!-- ========================= HERO / BIO SECTION ========================= -->
+    <section class="container">
+        <div class="about-hero">
+            <!-- Image Side -->
+            <div class="about-image-wrapper">
+                <!-- Placeholder for your image -->
+                <img src="images/Hero_image3.jpg" alt="Rohit Bharadva">
+            </div>
 
-      <section class="journey-section container">
-        <h2>My Journey</h2>
-        <div class="journey-content">
-          <p>
-            I have a strong foundation in web development and programming, with proficiency in HTML, CSS, JavaScript, Python, and PHP. My passion lies in building scalable and efficient applications, and I am always eager to contribute to dynamic development teams. As a quick learner with a problem-solving mindset, I thrive on tackling new challenges and delivering high-quality solutions.
-          </p>
-          <p>
-            Over the years, I have honed my skills in responsive design, performance optimization, and user experience. I enjoy bringing ideas to life through code and am committed to continuously learning new technologies to stay at the forefront of web development.
-          </p>
-        </div>
-      </section>
+            <!-- Text Side -->
+            <div class="about-text">
+                <h1>More than just pixels on a screen.</h1>
+                <p>
+                    Hello! I'm Rohit, a UI/UX Designer passionate about bridging the gap between complex technology and human needs. 
+                    I believe that good design is invisible—it just works.
+                </p>
+                <p>
+                    With a background in B.Sc. Computer Science, I bring a unique perspective to problem-solving. 
+                    Whether I'm wireframing a new app or tweaking micro-interactions, my goal is always the same: 
+                    to create experiences that are intuitive, accessible, and delightful.
+                </p>
 
-      <section class="education-section container">
-        <h2>Education & Certifications</h2>
-        <div class="education-grid">
-          <article class="edu-item">
-            <h3>B.Sc. in Computer Science</h3>
-            <p>Aatmanand Saraswati Science College, 2022-2025</p>
-          </article>
-          <article class="edu-item">
-            <h3>Skills</h3>
-            <p>HTML, CSS, JavaScript, React, Python, PHP</p>
-          </article>
-          </div>
-      </section>
-
-      <section class="tools-section">
-        <div class="container">
-          <h2>Tools I Work With</h2>
-          <div class="tool-icons">
-            <div class="tool-item">
-              <img src="images/html.svg" alt="HTML5 Logo" title="HTML5" />
-              <span>HTML</span>
-            </div>
-            <div class="tool-item">
-              <img src="images/css.svg" alt="CSS3 Logo" title="CSS3" />
-              <span>CSS</span>
-            </div>
-            <div class="tool-item">
-              <img src="images/js.svg" alt="JavaScript Logo" title="JavaScript" />
-              <span>JS</span>
-            </div>
-            <div class="tool-item">
-              <img src="images/react.svg" alt="React Logo" title="React" />
-              <span>React</span>
-            </div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <h4>Fresher</h4>
+                        <span>Years Exp.</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>3+</h4>
+                        <span>Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <span>Commitment</span>
+                    </div>
+                </div>
             </div>
         </div>
-      </section>
+    </section>
 
-      <section class="connect-cta container">
-        <p>Want to see my experience in detail? Download my resume below!</p>
-        <button><a href="res/Rohit CV1.pdf" download class="resume-download-btn">Download Resume</a></button>
-      </section>
-    </main>
+    <!-- ========================= WORK EXPERIENCE ========================= -->
+   <!-- <section class="container">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="experience-grid">
+            
+            <div class="experience-card">
+                <div class="exp-content">
+                    <div class="exp-role">
+                        <h3>Senior UI Designer</h3>
+                        <span>Creative Agency Inc.</span>
+                    </div>
+                    <p class="exp-desc">
+                        Led the redesign of major e-commerce platforms, improved conversion rates by 20%, 
+                        and mentored junior designers on design systems.
+                    </p>
+                </div>
+                <div class="exp-date">2022 - Present</div>
+            </div>
+
+            
+            <div class="experience-card">
+                <div class="exp-content">
+                    <div class="exp-role">
+                        <h3>UX Designer</h3>
+                        <span>Tech Startup Solutions</span>
+                    </div>
+                    <p class="exp-desc">
+                        Collaborated with developers to build SaaS products from scratch. Conducted user research 
+                        and usability testing cycles.
+                    </p>
+                </div>
+                <div class="exp-date">2020 - 2022</div>
+            </div>
+             
+             
+             <div class="experience-card">
+                <div class="exp-content">
+                    <div class="exp-role">
+                        <h3>Freelance Designer</h3>
+                        <span>Self-Employed</span>
+                    </div>
+                    <p class="exp-desc">
+                        Worked with diverse clients globally to deliver branding packages, websites, and mobile app designs.
+                    </p>
+                </div>
+                <div class="exp-date">2018 - 2020</div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- ========================= CORE VALUES ========================= -->
+    <section class="container" style="padding-top: 0;">
+        <h2 class="section-title">My Approach</h2>
+        
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>User-Centric</h3>
+                <p>
+                    I don't just design for screens; I design for people. Every decision is backed by 
+                    empathy and an understanding of user behaviors.
+                </p>
+            </div>
+            <div class="value-card">
+                <h3>Data-Driven</h3>
+                <p>
+                    Aesthetics matter, but metrics matter more. I use data to validate design choices 
+                    and ensure we are solving the right problems.
+                </p>
+            </div>
+            <div class="value-card">
+                <h3>Collaborative</h3>
+                <p>
+                    Design doesn't happen in a silo. I work closely with developers, product managers, 
+                    and stakeholders to ensure feasibility and alignment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= CTA SECTION ========================= -->
+    <section class="bottom-cta container">
+        <h2>Let’s Create Something Great Together!</h2>
+
+        <div class="contact-details">
+            <div class="contact-row">
+                <!-- Mail Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22 6 12 13 2 6"/>
+                </svg>
+                <span>rohitbharadava15@gmail.com</span>
+            </div>
+
+            <div class="contact-row">
+                <!-- Phone Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2.08A15.94 15.94 0 0 1 3 5.1a2 2 0 0 1 2.09-2.18h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a13.07 13.07 0 0 0 5.66 5.66l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7a2 2 0 0 1 1.72 2z"/>
+                </svg>
+                <span>+91 9586375340</span>
+            </div>
+        </div>
+
+        <button class="footer-cta-btn">
+            Let’s create designs that not only look good but work smart.
+        </button>
+    </section>
 
     <footer>
-      <div class="footer-container">
-        <div class="footer-section">
-          <h3>Connect with Me</h3>
-          <p>
-            Surat, Gujarat <br />
-            India
-          </p>
-          <p>Email: rohitbharadava15@gmail.com</p>
-          <p>Phone: +91 9586375340</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="Projects.html">My Projects</a></li>
-            <li><a href="AboutMe.html">About Me</a></li>
-            <li><a href="res/Rohit CV1.pdf" download>Resume</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Follow Me</h3>
-          <div class="social-icons">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" title="LinkedIn">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764c0 .974-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                ></path>
-              </svg>
-            </a>
-            <a aria-label="GitHub" href="https://github.com/Rohit-Bharadva" title="GitHub">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.25.82-.557 0-.274-.009-.998-.014-1.956-3.337.724-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.756-1.332-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.492.998.108-.77.422-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.124-.3-.535-1.52.117-3.176 0 0 1-.322 3.296 1.233.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.296-1.555 3.293-1.233 3.293-1.233.653 1.656.242 2.876.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.806 5.624-5.478 5.921.429.37.811 1.101.811 2.222 0 1.606-.015 2.895-.015 3.286 0 .309.21.678.825.557C20.565 21.808 24 17.302 24 12c0-6.627-5.373-12-12-12z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; <span id="current-year"></span> Rohit B. All rights reserved.
-      </div>
+        &copy; 2025 Rohit Bharadva. All rights reserved.
     </footer>
+
+    <!-- ========================= MOBILE MENU SCRIPT ========================= -->
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const hamburger = document.querySelector('.hamburger-menu');
-        const mainNav = document.querySelector('.main-nav');
-        const header = document.querySelector('header');
+        // 1. Mobile Menu Logic
+        const hamburger = document.querySelector(".hamburger-menu");
+        const nav = document.querySelector(".main-nav");
 
-        if (hamburger && mainNav && header) {
-          hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('active');
-            mainNav.classList.toggle('active');
-
-            const headerHeight = header.offsetHeight;
-            mainNav.style.top = `${headerHeight}px`;
-          });
-
-          mainNav.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', () => {
-              hamburger.classList.remove('active');
-              mainNav.classList.remove('active');
+        if(hamburger) {
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
             });
-          });
         }
 
-        // Set current year dynamically for footer
-        const currentYear = new Date().getFullYear();
-        const yearElement = document.getElementById('current-year');
-        if (yearElement) {
-          yearElement.textContent = currentYear;
-        }
-      });
+        // 2. Scroll Animation Logic (Intersection Observer)
+        // Select elements we want to animate on scroll
+        const revealElements = document.querySelectorAll(".experience-card, .value-card, .section-title, .bottom-cta");
+
+        // Add the 'reveal' class to these elements initially
+        revealElements.forEach(el => el.classList.add('reveal'));
+
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits the bottom
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add a slight delay based on index for grid items
+                    // This checks if the item is part of a grid to stagger it
+                    const delay = entry.target.classList.contains('value-card') 
+                        ? (Array.from(entry.target.parentNode.children).indexOf(entry.target) % 3) * 100 
+                        : 0;
+
+                    setTimeout(() => {
+                        entry.target.classList.add("active");
+                    }, delay);
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
     </script>
-  </body>
+</body>
 </html>
