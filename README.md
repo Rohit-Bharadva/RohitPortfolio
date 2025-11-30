@@ -15,6 +15,9 @@ This is my personal portfolio website built to highlight my web development jour
 
 ## 🧩 Tech Stack
 
+- Figma
+- Wireframing
+- Prototyping
 - HTML5
 - CSS3 (Sass/SCSS)
 - JavaScript (ES6+)
@@ -33,15 +36,3 @@ This is my personal portfolio website built to highlight my web development jour
 - Structured code with clean layout
 
 ---
-
-## 📂 Project Structure
-
-```bash
-├── index.html           # Home Page
-├── about.html           # About Me Section
-├── projects.html        # Featured Projects
-├── contact.html         # Contact Info
-├── /assets              # Images, icons, illustrations
-├── /css                 # Styles (SCSS or CSS)
-├── /js                  # Scripts (if any)
-└── README.md
