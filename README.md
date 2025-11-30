@@ -1,4 +1,4 @@
-# 🌐 Rohit B. — Developer Portfolio
+# 🌐 Rohit B. — UI/UX Designer Portfolio
 
 A modern, responsive, and professional developer portfolio to showcase my skills, experience, and featured projects — designed with clean UI, smooth UX, and performance in mind.
 
