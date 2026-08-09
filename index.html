@@ -1,253 +1,397 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Bharadva - UI/UX Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/R Logo.png">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <meta
+      name="description"
+      content="Rohit Bharadva — UI/UX Designer creating thoughtful and intuitive digital experiences."
+    />
 
-    <!-- ========================= HEADER ========================= -->
-    <header>
-        <div class="container">
-            <div class="logo-wrapper">
-                <a href="index.html">
-                    <h1>Rohit Bharadva</h1>
-            </a>
-            </div>
+    <title>Rohit Bharadva — UI/UX Designer</title>
 
-            <button class="hamburger-menu" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-            <nav class="main-nav">
-                <a href="AboutMe.html">About Me</a>
-                <a href="Projects.html">Work</a>
-                <a href="Contact.html" class="contact-btn">Contact Me</a>
-            </nav>
-        </div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" type="image/x-icon" href="images/R Logo.png" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Rohit Bharadva home">
+          Rohit<span>.</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="Projects.html"> Projects </a>
+
+          <a href="#experience"> Experience </a>
+
+          <a href="AboutMe.html"> About </a>
+
+          <a href="Contact.html" class="nav-cta"> Let's talk </a>
+        </nav>
+      </div>
     </header>
 
-    <!-- ========================= HERO SECTION ========================= -->
-    <section class="hero-section container">
-        <div class="hero-content">
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-           <div class="hero-profile">
+    <main>
+      <!-- =================================================
+             HERO
+        ================================================== -->
 
-              <div class="hero-img">
-                  <img src="images/Hero_image3.jpg" alt="Rohit Bharadva">
-              </div>
+      <section class="hero container">
+        <!-- Hero Top -->
 
-              <div class="hero-info">
-                  <h3 class="hero-name">Rohit Bharadva</h3>
+        <div class="hero-top">
+          <!-- Profile -->
 
-                  <a href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" target="_blank" class="linkedin-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#FFFFFF" role="img" aria-label="LinkedIn" focusable="false">
-                        <title>LinkedIn</title>
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.849-3.037-1.849 0-2.132 1.445-2.132 2.939v5.667H9.357V9h3.414v1.561h.049c.476-.9 1.637-1.849 3.369-1.849 3.602 0 4.268 2.371 4.268 5.456v6.284zM5.337 7.433c-1.144 0-2.069-.925-2.069-2.068 0-1.144.925-2.069 2.069-2.069s2.068.925 2.068 2.069c0 1.143-.924 2.068-2.068 2.068zM6.995 20.452H3.678V9h3.317v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.225.792 24 1.771 24h20.451C23.2 24 24 23.225 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                      </svg>
-                  </a>
-              </div>
+          <div class="hero-profile">
+            <div class="hero-profile-image">
+              <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+            </div>
 
+            <div class="hero-profile-info">
+              <h2>Rohit Bharadva</h2>
+
+              <p>UI/UX Designer</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Main -->
+
+        <div class="hero-main">
+          <h1>
+            I design digital products that are
+            <span> simple to understand </span>
+            and
+            <span> meaningful to use. </span>
+          </h1>
+
+          <div class="hero-bottom">
+            <p class="hero-description">
+              I turn complex product problems into clear, intuitive experiences
+              through thoughtful UX, interaction design, and polished
+              interfaces.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="button button-primary"> View my work </a>
+
+              <a href="AboutMe.html" class="text-link"> About me </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Footer -->
+
+        <div class="hero-footer">
+          <span> UI/UX </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Web & Mobile </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Product Design </span>
+
+          <span class="hero-scroll"> Scroll to explore ↓ </span>
+        </div>
+      </section>
+
+      <!-- =================================================
+             PROJECTS
+        ================================================== -->
+      <section class="work-section container" id="work">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2>Projects</h2>
           </div>
 
+          <!-- Yeh link perfectly aapko Projects.html page par le jayega -->
+          <a href="Projects.html" class="text-link"> View all work </a>
+        </div>
 
+        <!-- Project Grid -->
+        <div class="featured-work">
+          <!-- Project 01: Mealora -->
+          <!-- URL mein ?project=mealora add kiya gaya hai -->
+          <a href="CaseStudy.html?project=mealora" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Mealora.png" alt="Mealora project" />
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-number">01</span>
+                <h3>Mealora</h3>
+                <p>Smart grocery shopping and meal planning experience.</p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Grocery management</span>
+              <span>Shopping</span>
+            </div>
+          </a>
 
-            <h1>
-                I'm Rohit, a UI/UX Designer and developer specializing in building
-                intuitive, human-centered experiences.
-            </h1>
+          <!-- Project 02: Car Rental -->
+          <a href="CaseStudy.html?project=car-rental" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Car app.png" alt="Car app project" />
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-number">02</span>
+                <h3>Car Rental app</h3>
+                <p>
+                  A seamless car rental experience with real-time availability.
+                </p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Car Rental</span>
+              <span>Mobile</span>
+            </div>
+          </a>
+
+          <!-- Project 03: Fitness Buddy -->
+          <a href="CaseStudy.html?project=fitness-buddy" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Fitness buddy.png" alt="Fitness buddy project" />
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-number">03</span>
+                <h3>Fitness Buddy</h3>
+                <p>
+                  A fitness companion app for personalized workouts and meal
+                  planning.
+                </p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Fitness</span>
+              <span>Health</span>
+            </div>
+          </a>
+
+          <!-- Project 04: Collab Bro -->
+          <a href="CaseStudy.html?project=collab-bro" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Collab bro.png" alt="Collab bro project" />
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="project-number">04</span>
+                <h3>Collab Bro.</h3>
+                <p>
+                  Collaborative platform for brands and influencers to connect
+                  and collaborate.
+                </p>
+              </div>
+            </div>
+            <div class="project-tags">
+              <span>Collaboration</span>
+              <span>Influencer Marketing</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             EXPERIENCE SECTION
+        ====================================================== -->
+      <section class="container exp-section" id="experience">
+        <p class="eyebrow">Experience</p>
+        <h2
+          class="fade-in-up"
+          style="
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: -0.03em;
+          "
+        >
+          Professional experience
+        </h2>
+
+        <div class="exp-card fade-in-up">
+          <div class="exp-role">
+            <h3>UniQual iTech</h3>
+            <span>UniQual iTech</span>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 15px;
+                margin-top: 12px;
+                max-width: 600px;
+                line-height: 1.6;
+              "
+            >
+              Translating business requirements into highly interactive,
+              user-centric interfaces. Building comprehensive design systems and
+              bridging the gap between UI design and frontend execution.
+            </p>
+          </div>
+          <div class="exp-date">Feb 2026 - Present</div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             DESIGN APPROACH
+        ================================================== -->
+
+      <section class="statement-section container" id="approach">
+        <p class="eyebrow">How I think</p>
+
+        <h2>
+          Good design isn't just about making things look better.
+
+          <span> It's about making the right things easier. </span>
+        </h2>
+
+        <div class="approach-grid">
+          <article>
+            <span> 01 </span>
+
+            <h3>Understand</h3>
 
             <p>
-                I specialize in creating visually stunning, user-friendly experiences
-                that deliver measurable results and drive business growth.
+              I start with the user, business goals, requirements, and
+              constraints before jumping into screens.
             </p>
-            
-            <a href="Contact.html" class="primary-btn">
-                Let’s Build Together
-            </a>
-        </div>
-    </section>
+          </article>
 
-    <!-- ========================= CASE STUDIES ========================= -->
-    <section class="case-studies container">
-        <h2>Case Studies</h2>
+          <article>
+            <span> 02 </span>
 
-        <div class="projects-grid">
+            <h3>Structure</h3>
 
-            <article class="project-card" onclick="location.href='Projects.html';">
-                <div class="project-inner">
-                    <div class="project-image-wrapper">
-                        <img src="images/PM1.png" alt="Moris Clothing Brand">
-                    </div>
-                    <div class="card-text">
-                        <div class="card-tags">
-                            <span class="tag">E-Commerce</span>
-                            <span class="tag">UI/UX</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                        <h3>Moris – Clothing Brand</h3>
-                        <p>
-                            An online boutique designed to help women discover trending styles through a chic and curated collection.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card" onclick="location.href='Projects.html';">
-                <div class="project-inner">
-                    <div class="project-image-wrapper">
-                        <img src="images/PM2.png" alt="Ovenza Food Brand">
-                    </div>
-                    <div class="card-text">
-                        <div class="card-tags">
-                            <span class="tag">Restaurant App</span>
-                            <span class="tag">Food Tech</span>
-                            <span class="tag">UX Design</span>
-                        </div>
-                        <h3>Ovenza – Food Brand</h3>
-                        <p>
-                            From crispy snacks to sweet endings, complete your meal with our wide range of sides and beverages.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-card" onclick="location.href='Projects.html';">
-                <div class="project-inner">
-                    <div class="project-image-wrapper">
-                        <img src="images/PM3.png" alt="EmFit Smart Connect">
-                    </div>
-                    <div class="card-text">
-                        <div class="card-tags">
-                            <span class="tag">Health Tech</span>
-                            <span class="tag">IoT</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <h3>EmFit – Smart Connect</h3>
-                        <p>
-                            A companion app that syncs your EmFit smartwatch for real‑time health tracking, sleep insights, and seamless device control.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </section>
-    
-    <!-- ========================= SKILLS SECTION ========================= -->
-    <section class="skills-section container">
-        <h2>Skills/Tools</h2>
-
-        <div class="skills-intro">
             <p>
-                I focus on creating intuitive and engaging interfaces by deeply understanding user needs.
-                My process involves research, wireframing, and prototyping to ensure a seamless and
-                enjoyable user journey from start to finish.
+              I turn complex requirements into clear flows, information
+              architecture, and purposeful interactions.
             </p>
+          </article>
+
+          <article>
+            <span> 03 </span>
+
+            <h3>Refine</h3>
+
+            <p>
+              I iterate through feedback, testing, and visual refinement to
+              create polished experiences.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+      <section class="about-preview container">
+        <div class="about-image">
+          <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
         </div>
 
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="icon-box"><img src="images/figma 1.png" alt="Figma"></div>
-                <span>Figma</span>
-            </div>
+        <div class="about-copy">
+          <p class="eyebrow">A little about me</p>
 
-            <div class="skill-card">
-                <div class="icon-box"><img src="images/research 1.png" alt="Research"></div>
-                <span>Research</span>
-            </div>
+          <h2>Designer by craft. Product designer by mindset.</h2>
 
-            <div class="skill-card">
-                <div class="icon-box"><img src="images/web-layout 1.png" alt="Wireframing"></div>
-                <span>Wireframing</span>
-            </div>
+          <p>
+            I enjoy working at the intersection of user needs, business goals,
+            and technology. My work spans UX research, information architecture,
+            interaction design, visual systems, and high-fidelity prototyping.
+          </p>
 
-            <div class="skill-card">
-                <div class="icon-box"><img src="images/prototype (1) 1.png" alt="Prototyping"></div>
-                <span>Prototyping</span>
-            </div>
+          <a href="AboutMe.html" class="text-link"> Get to know me </a>
         </div>
-    </section>
+      </section>
 
-    <!-- ========================= CTA SECTION ========================= -->
-    <section class="bottom-cta container">
-        <h2>Let’s Create Something Great Together!</h2>
+      <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+      <section class="contact-section container">
+        <p class="eyebrow">Have a product in mind?</p>
+
+        <h2>
+          Let's make something
+          <em> meaningful. </em>
+        </h2>
+
+        <a href="Contact.html" class="button button-primary">
+          Start a conversation
+        </a>
 
         <div class="contact-details">
-            <div class="contact-row">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22 6 12 13 2 6"/>
-                </svg>
-                <span>rohitbharadava15@gmail.com</span>
-            </div>
+          <a href="mailto:rohitbharadava15@gmail.com">
+            rohitbharadava15@gmail.com
+          </a>
 
-            <div class="contact-row">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2.08A15.94 15.94 0 0 1 3 5.1a2 2 0 0 1 2.09-2.18h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a13.07 13.07 0 0 0 5.66 5.66l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7a2 2 0 0 1 1.72 2z"/>
-                </svg>
-                <span>+91 9586375340</span>
-            </div>
+          <span> · </span>
+
+          <a
+            href="https://www.linkedin.com/in/rohit-bharadva-0b0139296"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
+      </section>
+    </main>
 
-        <button class="footer-cta-btn">
-            Let’s create designs that not only look good but work smart.
-        </button>
-    </section>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-    <footer></footer>
+    <footer class="site-footer container">
+      <span>
+        ©
+        <span id="year"></span>
+        Rohit Bharadva
+      </span>
 
-    <!-- ========================= MOBILE MENU SCRIPT ========================= -->
-    <script>
-        // 1. Mobile Menu Logic
-        const hamburger = document.querySelector(".hamburger-menu");
-        const nav = document.querySelector(".main-nav");
+      <span> Designed & built with intention. </span>
+    </footer>
 
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            nav.classList.toggle("active");
-        });
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-        // 2. Scroll Animation Logic (Intersection Observer)
-        // Select elements we want to animate on scroll
-        const revealElements = document.querySelectorAll(".project-card, .skill-card, .skills-intro p, section h2, .bottom-cta");
-
-        // Add the 'reveal' class to these elements initially via JS
-        // so if JS fails, they are still visible by default (progressive enhancement)
-        revealElements.forEach(el => el.classList.add('reveal'));
-
-        const observerOptions = {
-            threshold: 0.1, // Trigger when 10% of the element is visible
-            rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits the bottom
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Add a slight delay based on index for staggered grid effect
-                    setTimeout(() => {
-                        entry.target.classList.add("active");
-                    }, index * 100); // 100ms delay between items if they appear together
-                    
-                    observer.unobserve(entry.target); // Stop watching once revealed
-                }
-            });
-        }, observerOptions);
-
-        revealElements.forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-
-
-</body>
-
+    <script src="Script.js"></script>
+  </body>
 </html>
-
