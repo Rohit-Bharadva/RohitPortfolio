@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rohit Bharadva — UI/UX Designer. Let's make something meaningful.">
+    <title>Contact - Rohit Bharadva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Use main style.css for consistent design language -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/x-icon" href="images/R Logo.png">
+
+    <!-- 2026 Creative Bento-Grid Styles -->
+    <style>
+        .contact-page-header {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-page-header h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            margin-bottom: 20px;
+            line-height: 1.05;
+        }
+
+        .contact-page-header h1 span {
+            color: var(--text-secondary);
+        }
+
+        .contact-page-header p {
+            color: var(--text-secondary);
+            font-size: clamp(16px, 2vw, 18px);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Bento Grid Container */
+        .bento-container {
+            padding-bottom: 120px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Individual Bento Cards */
+        .bento-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 32px; /* Large modern radius */
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .bento-card:hover {
+            background: var(--surface-hover);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Specific Card Sizing */
+        .card-email {
+            grid-column: 1 / -1; /* Spans full width */
+            min-height: 280px;
+        }
+
+        .card-linkedin {
+            grid-column: 1 / 2;
+            min-height: 240px;
+        }
+
+        .card-location {
+            grid-column: 2 / 3;
+            min-height: 240px;
+            cursor: default; /* Not a link */
+        }
+
+        .card-location:hover {
+            transform: none; /* Disable lift for non-interactive card */
+            box-shadow: none;
+            border-color: var(--border-hover);
+        }
+
+        /* Card Elements */
+        .bento-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: auto;
+            transition: all 0.4s ease;
+        }
+
+        .bento-card:hover .bento-icon {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--white);
+        }
+
+        .bento-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 8px;
+        }
+
+        .bento-value {
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-email .bento-value {
+            font-size: clamp(28px, 5vw, 48px);
+        }
+
+        /* Hover Arrow Animation */
+        .hover-arrow {
+            opacity: 0;
+            transform: translate(-10px, 10px);
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            color: var(--text-secondary);
+        }
+
+        .bento-card:hover .hover-arrow {
+            opacity: 1;
+            transform: translate(0, 0);
+            color: var(--white);
+        }
+
+        /* Subtle Glow Effect for Email Card */
+        .card-email::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        
+        .card-email:hover::before {
+            opacity: 1;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 767px) {
+            .contact-page-header {
+                padding-top: 40px;
+                padding-bottom: 32px;
+                text-align: left;
+            }
+            .contact-page-header p {
+                margin: 0;
+            }
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .card-linkedin, .card-location {
+                grid-column: 1 / -1;
+            }
+            .bento-card {
+                padding: 32px;
+                border-radius: 24px;
+            }
+            .hover-arrow {
+                opacity: 1;
+                transform: translate(0, 0);
+                width: 24px;
+                height: 24px;
+            }
+            .card-email {
+                min-height: 240px;
+            }
+            .bento-value {
+                word-break: break-word; /* Prevents long email from overflowing */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand" aria-label="Rohit Bharadva home">
+                Rohit<span>.</span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="Projects.html">Projects</a>
+                <a href="index.html#experience">Experience</a>
+               
+                <a href="AboutMe.html">About</a>
+                <a href="Contact.html" class="nav-cta">Let's talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main>
+
+        <section class="container contact-page-header">
+            <h1 class="fade-in">Let's start a <span>conversation.</span></h1>
+            <p class="fade-in" style="animation-delay: 0.1s;">Skip the forms. Reach out directly through your preferred platform and I'll get back to you as soon as possible.</p>
+        </section>
+
+        <section class="container bento-container">
+            <div class="bento-grid">
+                
+                <!-- Email Card (Primary Focus) -->
+                <a href="mailto:rohitbharadava15@gmail.com" class="bento-card card-email fade-in" style="animation-delay: 0.2s;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22 6 12 13 2 6"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="bento-label">Drop a line</p>
+                        <div class="bento-value">
+                            rohitbharadava15@gmail.com
+                            <svg class="hover-arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" target="_blank" rel="noopener noreferrer" class="bento-card card-linkedin fade-in" style="animation-delay: 0.3s;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="bento-label">Professional Network</p>
+                        <div class="bento-value">
+                            LinkedIn
+                            <svg class="hover-arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Location Card -->
+                <div class="bento-card card-location fade-in" style="animation-delay: 0.4s;">
+                    <div class="bento-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 1 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="bento-label">Current Base</p>
+                        <div class="bento-value">
+                            Surat, India
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer container">
+        <span>
+            © <span id="year"></span> Rohit Bharadva
+        </span>
+        <span>
+            Designed & built with intention.
+        </span>
+    </footer>
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="Script.js"></script>
+</body>
+</html>

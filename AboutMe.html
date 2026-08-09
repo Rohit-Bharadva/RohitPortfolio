@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Rohit Bharadva — UI/UX Designer.">
+    <title>About Me - Rohit Bharadva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Using main style.css for 100% consistency -->
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/x-icon" href="images/R Logo.png">
+
+    <!-- Specific styles for 2026 About Page Layout -->
+    <style>
+        .about-hero-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .about-hero-section {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 80px;
+            }
+        }
+
+        /* Text on the Left */
+        .about-text-left h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+        }
+
+        .about-text-left p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        /* Visuals on the Right */
+        .about-visual-right {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .about-visual-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: high-quality;
+        }
+
+        /* --- Signature Expertise Section (List Format) --- */
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary);
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .expertise-section {
+            margin-bottom: 140px;
+        }
+
+        .expertise-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .expertise-item {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.4s var(--ease);
+        }
+
+        @media (min-width: 768px) {
+            .expertise-item {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .expertise-item:hover {
+            padding-left: 20px;
+            padding-right: 20px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .exp-left {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+        }
+
+        .exp-number {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            font-family: monospace;
+        }
+
+        .exp-title {
+            font-size: clamp(32px, 4vw, 40px);
+            font-weight: 500;
+            letter-spacing: -0.03em;
+        }
+
+        .exp-detail {
+            max-width: 400px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .exp-detail {
+                text-align: right;
+                margin-top: 0;
+            }
+        }
+        /* --- Experience Section Restored & Modernized --- */
+        .exp-section {
+            margin-bottom: 120px;
+        }
+
+        .exp-card {
+            display: flex;
+            flex-direction: column;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border);
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .exp-card {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+
+        .exp-card:first-of-type {
+            border-top: 1px solid var(--border);
+        }
+
+        .exp-role h3 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .exp-role span {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .exp-date {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            min-width: 160px;
+            text-align: left;
+        }
+
+        @media (min-width: 768px) {
+            .exp-date {
+                text-align: right;
+            }
+        }
+
+        /* --- Call to Action --- */
+        .about-cta {
+            text-align: center;
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .about-cta h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: -0.04em;
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand" aria-label="Rohit Bharadva home">
+                Rohit<span>.</span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="Projects.html">Projects</a>
+                <a href="index.html#experience">Experience</a>
+               
+                <a href="AboutMe.html">About</a>
+                <a href="Contact.html" class="nav-cta">Let's talk</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- =====================================================
+             HERO SECTION (Text Left, Image Right)
+        ====================================================== -->
+        <section class="container about-hero-section">
+            <div class="about-text-left fade-in-up">
+                <h1>More than just pixels on a screen.</h1>
+                <p>Hello! I'm Rohit Bharadva, a UI/UX Designer passionate about bridging the gap between complex technology and human needs. I believe that good design is invisible—it just works.</p>
+                <p>With a background in B.Sc. Computer Science and a deep focus on human-centered design, I bring a unique, structural perspective to problem-solving. Whether I'm building scalable design systems in Figma, crafting wireframes, or tweaking micro-interactions, my goal is always to create experiences that are intuitive, accessible, and visually delightful.</p>
+            </div>
+            
+            <div class="about-visual-right fade-in-up" style="animation-delay: 0.2s;">
+                <img src="images/Hero_image3.jpg" alt="Rohit Bharadva">
+            </div>
+        </section>
+
+        <!-- =====================================================
+             CORE EXPERTISE (Minimalist List)
+        ====================================================== -->
+        <section class="container expertise-section fade-in-up">
+            <span class="section-label">Core Capabilities</span>
+            <ul class="expertise-list">
+                <li class="expertise-item">
+                    <div class="exp-left">
+                       
+                        <h3 class="exp-title">Design Systems</h3>
+                    </div>
+                    <p class="exp-detail">Architecting robust, scalable component libraries that bridge the gap between design and development, ensuring absolute visual consistency.</p>
+                </li>
+                <li class="expertise-item">
+                    <div class="exp-left">
+                       
+                        <h3 class="exp-title">User Experience</h3>
+                    </div>
+                    <p class="exp-detail">Mapping intricate user journeys and establishing clear information architecture to reduce cognitive load and eliminate friction.</p>
+                </li>
+                <li class="expertise-item">
+                    <div class="exp-left">
+                        
+                        <h3 class="exp-title">Interface Design</h3>
+                    </div>
+                    <p class="exp-detail">Crafting pixel-perfect, high-fidelity interfaces that balance modern aesthetics with profound usability and accessibility standards.</p>
+                </li>
+                <li class="expertise-item">
+                    <div class="exp-left">
+                      
+                        <h3 class="exp-title">Prototyping</h3>
+                    </div>
+                    <p class="exp-detail">Developing advanced, interactive prototypes to validate logic, communicate motion design, and facilitate rigorous user testing.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- =====================================================
+             EXPERIENCE SECTION
+        ====================================================== -->
+        <section class="container exp-section">
+            <p class="eyebrow">
+                        Experience
+                    </p>
+            <h2 class="fade-in-up" style="font-size: clamp(32px, 5vw, 48px); font-weight: 500; margin-bottom: 40px; letter-spacing: -0.03em;">Professional experience</h2>
+            
+            <div class="exp-card fade-in-up">
+                <div class="exp-role">
+                    <h3>UniQual iTech</h3>
+                    <span>UniQual iTech</span>
+                    <p style="color: var(--text-secondary); font-size: 15px; margin-top: 12px; max-width: 600px; line-height: 1.6;">
+                        Translating business requirements into highly interactive, user-centric interfaces. Building comprehensive design systems and bridging the gap between UI design and frontend execution.
+                    </p>
+                </div>
+                <div class="exp-date">Feb 2026 - Present</div>
+            </div>
+
+            
+        </section>
+
+
+        <!-- =====================================================
+             DESIGN APPROACH (Exactly matched from index.html)
+        ====================================================== -->
+        <section class="statement-section container fade-in-up" id="approach">
+            <p class="eyebrow">How I think</p>
+            <h2>
+                Good design isn't just about making things look better.
+                <span>It's about making the right things easier.</span>
+            </h2>
+
+            <div class="approach-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Understand</h3>
+                    <p>I start with the user, business goals, requirements, and constraints before jumping into screens.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Structure</h3>
+                    <p>I turn complex requirements into clear flows, information architecture, and purposeful interactions.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Refine</h3>
+                    <p>I iterate through feedback, testing, and visual refinement to create polished experiences.</p>
+                </article>
+            </div>
+        </section>
+
+       <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <section class="contact-section container">
+
+
+            <p class="eyebrow">
+                Have a product in mind?
+            </p>
+
+
+            <h2>
+
+                Let's make something
+                <em>
+                    meaningful.
+                </em>
+
+            </h2>
+
+
+            <a
+                href="Contact.html"
+                class="button button-primary"
+            >
+
+                Start a conversation
+
+               
+
+            </a>
+
+
+            <div class="contact-details">
+
+                <a href="mailto:rohitbharadava15@gmail.com">
+                    rohitbharadava15@gmail.com
+                </a>
+
+                <span>
+                    ·
+                </span>
+
+                <a
+                    href="https://www.linkedin.com/in/rohit-bharadva-0b0139296"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         FOOTER (Exactly matched from index.html)
+    ====================================================== -->
+    <footer class="site-footer container">
+        <span>
+            © <span id="year"></span> Rohit Bharadva
+        </span>
+        <span>
+            Designed & built with intention.
+        </span>
+    </footer>
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+    <script>
+        /* Mobile Menu Logic */
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+
+        if(menuToggle && mainNav) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", String(!isOpen));
+                mainNav.classList.toggle("is-open");
+            });
+
+            mainNav.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    menuToggle.setAttribute("aria-expanded", "false");
+                    mainNav.classList.remove("is-open");
+                });
+            });
+        }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        /* Scroll Reveal Animation */
+        const revealElements = document.querySelectorAll(".fade-in-up");
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
