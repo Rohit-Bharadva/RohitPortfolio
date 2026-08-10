@@ -2,17 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Rohit Bharadva — UI/UX Designer creating thoughtful and intuitive digital experiences." />
+
+    <meta
+      name="description"
+      content="Rohit Bharadva — UI/UX Designer creating thoughtful and intuitive digital experiences."
+    />
+
     <title>Rohit Bharadva — UI/UX Designer</title>
 
-    <!-- Google Fonts -->
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <!-- Link to Universal CSS -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
+
     <link rel="icon" type="image/x-icon" href="images/R Logo.png" />
   </head>
 
@@ -20,21 +31,30 @@
     <!-- =====================================================
          HEADER
     ====================================================== -->
+
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="index.html" class="brand" aria-label="Rohit Bharadva home">
           Rohit<span>.</span>
         </a>
 
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
         </button>
 
         <nav class="main-nav" aria-label="Primary navigation">
-          <a href="Projects.html">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="AboutMe.html">About</a>
-          <a href="Contact.html" class="nav-cta">Let's talk</a>
+          <a href="Projects.html"> Projects </a>
+
+          <a href="#experience"> Experience </a>
+
+          <a href="AboutMe.html"> About </a>
+
+          <a href="Contact.html" class="nav-cta"> Let's talk </a>
         </nav>
       </div>
     </header>
@@ -42,65 +62,101 @@
     <!-- =====================================================
          MAIN
     ====================================================== -->
+
     <main>
-      
       <!-- =================================================
-           HERO SECTION
-      ================================================== -->
-      <section class="hero container framer-reveal">
-        
-        <!-- Premium Stacked Badge Lockup -->
-        <div class="hero-badge">
-          <img src="images/Hero_image3.jpg" alt="Rohit Bharadva Avatar" />
-          <div class="badge-text">
-            <span class="badge-name">Rohit Bharadva</span>
-            <span class="badge-role">UI/UX Designer</span>
+             HERO
+        ================================================== -->
+
+      <section class="hero container">
+        <!-- Hero Top -->
+
+        <div class="hero-top">
+          <!-- Profile -->
+
+          <div class="hero-profile">
+            <div class="hero-profile-image">
+              <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+            </div>
+
+            <div class="hero-profile-info">
+              <h2>Rohit Bharadva</h2>
+
+              <p>UI/UX Designer</p>
+            </div>
           </div>
         </div>
 
+        <!-- Hero Main -->
+
         <div class="hero-main">
           <h1>
-            Shaping intent into 
-            <span> seamless digital </span>
-            experiences.
+            I design digital products that are
+            <span> simple to understand </span>
+            and
+            <span> meaningful to use. </span>
           </h1>
 
           <div class="hero-bottom">
             <p class="hero-description">
-              I turn complex product problems into clear, intuitive interfaces through thoughtful UX, structural logic, and polished aesthetics.
+              I turn complex product problems into clear, intuitive experiences
+              through thoughtful UX, interaction design, and polished
+              interfaces.
             </p>
 
             <div class="hero-actions">
-              <a href="#work" class="button-primary">Explore my work</a>
-              <a href="AboutMe.html" class="text-link">About me &rarr;</a>
+              <a href="#work" class="button button-primary"> View my work </a>
+
+              <a href="AboutMe.html" class="text-link"> About me </a>
             </div>
           </div>
+        </div>
+
+        <!-- Hero Footer -->
+
+        <div class="hero-footer">
+          <span> UI/UX </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Web & Mobile </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Product Design </span>
+
+          <span class="hero-scroll"> Scroll to explore ↓ </span>
         </div>
       </section>
 
       <!-- =================================================
-           PROJECTS GRID
-      ================================================== -->
-      <section class="work-section container framer-reveal" id="work">
+             PROJECTS
+        ================================================== -->
+      <section class="work-section container" id="work">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Selected work</p>
-            <h2>Case Studies</h2>
+            <h2>Projects</h2>
           </div>
-          <a href="Projects.html" class="text-link">View all work &rarr;</a>
+
+          <!-- Yeh link perfectly aapko Projects.html page par le jayega -->
+          <a href="Projects.html" class="text-link"> View all work </a>
         </div>
 
+        <!-- Project Grid -->
         <div class="featured-work">
-          
           <!-- Project 01: Mealora -->
+          <!-- URL mein ?project=mealora add kiya gaya hai -->
           <a href="CaseStudy.html?project=mealora" class="featured-card">
             <div class="project-visual">
               <img src="images/Mealora.png" alt="Mealora project" />
             </div>
             <div class="project-info">
-              <span class="project-number">01</span>
-              <h3>Mealora</h3>
-              <p>Smart grocery shopping and meal planning experience.</p>
+              <div>
+                <span class="project-number">01</span>
+                <h3>Mealora</h3>
+                <p>Smart grocery shopping and meal planning experience.</p>
+              </div>
             </div>
             <div class="project-tags">
               <span>Grocery management</span>
@@ -114,9 +170,13 @@
               <img src="images/Car app.png" alt="Car app project" />
             </div>
             <div class="project-info">
-              <span class="project-number">02</span>
-              <h3>Car Rental</h3>
-              <p>A seamless car rental experience with real-time availability.</p>
+              <div>
+                <span class="project-number">02</span>
+                <h3>Car Rental app</h3>
+                <p>
+                  A seamless car rental experience with real-time availability.
+                </p>
+              </div>
             </div>
             <div class="project-tags">
               <span>Car Rental</span>
@@ -130,9 +190,14 @@
               <img src="images/Fitness buddy.png" alt="Fitness buddy project" />
             </div>
             <div class="project-info">
-              <span class="project-number">03</span>
-              <h3>Fitness Buddy</h3>
-              <p>A fitness companion app for personalized workouts and meal planning.</p>
+              <div>
+                <span class="project-number">03</span>
+                <h3>Fitness Buddy</h3>
+                <p>
+                  A fitness companion app for personalized workouts and meal
+                  planning.
+                </p>
+              </div>
             </div>
             <div class="project-tags">
               <span>Fitness</span>
@@ -146,87 +211,165 @@
               <img src="images/Collab bro.png" alt="Collab bro project" />
             </div>
             <div class="project-info">
-              <span class="project-number">04</span>
-              <h3>Collab Bro.</h3>
-              <p>Collaborative platform for brands and influencers to connect and collaborate.</p>
+              <div>
+                <span class="project-number">04</span>
+                <h3>Collab Bro.</h3>
+                <p>
+                  Collaborative platform for brands and influencers to connect
+                  and collaborate.
+                </p>
+              </div>
             </div>
             <div class="project-tags">
               <span>Collaboration</span>
               <span>Influencer Marketing</span>
             </div>
           </a>
-
         </div>
       </section>
 
-      <!-- =================================================
-           EXPERIENCE SECTION
-      ================================================== -->
-      <section class="container exp-section framer-reveal" id="experience">
-        <p class="eyebrow">Background</p>
-        <h2 style="font-size: clamp(32px, 5vw, 56px); font-weight: 500; margin-bottom: 64px; letter-spacing: -0.04em;">
+      <!-- =====================================================
+             EXPERIENCE SECTION
+        ====================================================== -->
+      <section class="container exp-section" id="experience">
+        <p class="eyebrow">Experience</p>
+        <h2
+          class="fade-in-up"
+          style="
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: -0.03em;
+          "
+        >
           Professional experience
         </h2>
 
-        <div class="exp-card">
+        <div class="exp-card fade-in-up">
           <div class="exp-role">
             <h3>UniQual iTech</h3>
             <span>UI/UX Designer</span>
-            <p style="color: var(--text-secondary); font-size: 15px; margin-top: 16px; max-width: 500px; line-height: 1.6;">
-              Translating business requirements into highly interactive, user-centric interfaces. Building comprehensive design systems and bridging the gap between UI design and frontend execution.
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 15px;
+                margin-top: 12px;
+                max-width: 600px;
+                line-height: 1.6;
+              "
+            >
+              Translating business requirements into highly interactive,
+              user-centric interfaces. Building comprehensive design systems and
+              bridging the gap between UI design and frontend execution.
             </p>
           </div>
-          <div class="exp-date">
-            Feb 2026 - Present <br>
-            <span id="employment-duration" style="text-transform: none; font-size: 12px; color: var(--text-tertiary);"></span>
-          </div>
+          <div class="exp-date">Feb 2026 - Present</div>
         </div>
       </section>
 
       <!-- =================================================
-           DESIGN APPROACH
-      ================================================== -->
-      <section class="statement-section container framer-reveal" id="approach">
-        <p class="eyebrow">Design Philosophy</p>
+             DESIGN APPROACH
+        ================================================== -->
+
+      <section class="statement-section container" id="approach">
+        <p class="eyebrow">How I think</p>
+
         <h2>
           Good design isn't just about making things look better.
+
           <span> It's about making the right things easier. </span>
         </h2>
 
         <div class="approach-grid">
           <article>
-            <span>01</span>
+            <span> 01 </span>
+
             <h3>Understand</h3>
-            <p>I start with the user, business goals, requirements, and constraints before jumping into screens.</p>
+
+            <p>
+              I start with the user, business goals, requirements, and
+              constraints before jumping into screens.
+            </p>
           </article>
+
           <article>
-            <span>02</span>
+            <span> 02 </span>
+
             <h3>Structure</h3>
-            <p>I turn complex requirements into clear flows, information architecture, and purposeful interactions.</p>
+
+            <p>
+              I turn complex requirements into clear flows, information
+              architecture, and purposeful interactions.
+            </p>
           </article>
+
           <article>
-            <span>03</span>
+            <span> 03 </span>
+
             <h3>Refine</h3>
-            <p>I iterate through feedback, testing, and visual refinement to create polished experiences.</p>
+
+            <p>
+              I iterate through feedback, testing, and visual refinement to
+              create polished experiences.
+            </p>
           </article>
         </div>
       </section>
 
       <!-- =================================================
-           CONTACT CTA
-      ================================================== -->
-      <section class="contact-section container framer-reveal">
-        <p class="eyebrow">Ready for the next step?</p>
+             ABOUT
+        ================================================== -->
+
+      <section class="about-preview container">
+        <div class="about-image">
+          <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">A little about me</p>
+
+          <h2>Designer by craft. Product designer by mindset.</h2>
+
+          <p>
+            I enjoy working at the intersection of user needs, business goals,
+            and technology. My work spans UX research, information architecture,
+            interaction design, visual systems, and high-fidelity prototyping.
+          </p>
+
+          <a href="AboutMe.html" class="text-link"> Get to know me </a>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+      <section class="contact-section container">
+        <p class="eyebrow">Have a product in mind?</p>
+
         <h2>
           Let's make something
-          <em>meaningful.</em>
+          <em> meaningful. </em>
         </h2>
-        <a href="Contact.html" class="button-primary">Start a conversation</a>
-        
+
+        <a href="Contact.html" class="button button-primary">
+          Start a conversation
+        </a>
+
         <div class="contact-details">
-          <a href="mailto:rohitbharadava15@gmail.com">rohitbharadava15@gmail.com</a>
-          <span>·</span>
-          <a href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:rohitbharadava15@gmail.com">
+            rohitbharadava15@gmail.com
+          </a>
+
+          <span> · </span>
+
+          <a
+            href="https://www.linkedin.com/in/rohit-bharadva-0b0139296"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
     </main>
@@ -234,20 +377,21 @@
     <!-- =====================================================
          FOOTER
     ====================================================== -->
+
     <footer class="site-footer container">
       <span>
-        © <span id="year"></span> Rohit Bharadva
+        ©
+        <span id="year"></span>
+        Rohit Bharadva
       </span>
+
       <span> Designed & built with intention. </span>
     </footer>
 
     <!-- =====================================================
-         SCRIPTS
+         JAVASCRIPT
     ====================================================== -->
-    <!-- Lenis Smooth Scroll Library via CDN -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    
-    <!-- Link to Universal JS -->
+
     <script src="Script.js"></script>
   </body>
 </html>
