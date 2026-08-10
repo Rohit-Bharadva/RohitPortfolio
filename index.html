@@ -2,677 +2,374 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Rohit Bharadva — UI/UX Designer creating thoughtful and intuitive digital experiences." />
+
+    <meta
+      name="description"
+      content="Rohit Bharadva — UI/UX Designer creating thoughtful and intuitive digital experiences."
+    />
+
     <title>Rohit Bharadva — UI/UX Designer</title>
 
-    <!-- Google Fonts: Inter for ultimate clean typography -->
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
     <link rel="icon" type="image/x-icon" href="images/R Logo.png" />
-
-    <!-- 2026 LIGHT MODE EDITORIAL DESIGN SYSTEM -->
-    <style>
-      /* --- VARIABLES --- */
-      :root {
-        /* Colors */
-        --bg-color: #F7F7F5; /* Premium off-white/alabaster */
-        --surface-color: #FFFFFF;
-        --surface-alt: #F0F0EE;
-        
-        --text-primary: #111111;
-        --text-secondary: #555555;
-        --text-tertiary: #888888;
-        
-        --border-color: rgba(0, 0, 0, 0.08);
-        --border-hover: rgba(0, 0, 0, 0.2);
-        
-        --accent: #111111;
-        --accent-text: #FFFFFF;
-
-        /* Spacing & Layout */
-        --container-width: 1300px;
-        --radius-sm: 12px;
-        --radius-md: 24px;
-        --radius-lg: 32px;
-        --radius-pill: 100px;
-
-        /* Fluid Motion Easing (2026 Standard) */
-        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-        --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
-      }
-
-      /* --- RESET & BASE --- */
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      
-      html { 
-        scroll-behavior: auto; /* Required for Lenis */
-        background-color: var(--bg-color);
-      }
-      
-      body {
-        font-family: "Inter", -apple-system, sans-serif;
-        background: var(--bg-color);
-        color: var(--text-primary);
-        font-size: 16px;
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-      }
-
-      /* Tactile Noise Overlay */
-      .noise-overlay {
-        position: fixed;
-        top: 0; left: 0; width: 100vw; height: 100vh;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.03;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-      }
-
-      img { display: block; max-width: 100%; object-fit: cover; }
-      a { color: inherit; text-decoration: none; }
-      button { border: none; background: none; font-family: inherit; cursor: pointer; }
-
-      .container {
-        width: min(calc(100% - 40px), var(--container-width));
-        margin-inline: auto;
-      }
-
-      /* --- LENIS SMOOTH SCROLL STYLES --- */
-      html.lenis, html.lenis body { height: auto; }
-      .lenis.lenis-smooth { scroll-behavior: auto !important; }
-      .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-      .lenis.lenis-stopped { overflow: hidden; }
-
-      /* --- REUSABLE TYPOGRAPHY --- */
-      .tagline {
-        font-size: 11px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        color: var(--text-tertiary);
-        margin-bottom: 24px;
-        display: block;
-      }
-
-      .display-text {
-        font-size: clamp(48px, 9vw, 110px);
-        font-weight: 500;
-        line-height: 0.95;
-        letter-spacing: -0.04em;
-      }
-
-      .section-heading {
-        font-size: clamp(36px, 5vw, 64px);
-        font-weight: 500;
-        letter-spacing: -0.03em;
-        line-height: 1.1;
-      }
-
-      /* --- HEADER --- */
-      .site-header {
-        position: fixed;
-        top: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(calc(100% - 40px), var(--container-width));
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-pill);
-        padding: 12px 24px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: all 0.4s var(--ease-out-expo);
-      }
-
-      .brand {
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-      }
-      .brand span { color: var(--text-tertiary); }
-
-      .main-nav {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .main-nav a:not(.nav-cta) {
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--text-secondary);
-        transition: color 0.3s ease;
-        position: relative;
-      }
-
-      .main-nav a:not(.nav-cta):hover { color: var(--text-primary); }
-
-      .nav-cta {
-        background: var(--accent);
-        color: var(--accent-text);
-        padding: 10px 20px;
-        border-radius: var(--radius-pill);
-        font-size: 13px;
-        font-weight: 500;
-        transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
-      }
-
-      .nav-cta:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      }
-
-      /* Mobile Menu Toggle */
-      .menu-toggle { display: none; flex-direction: column; gap: 4px; padding: 10px; }
-      .menu-toggle span { width: 20px; height: 1.5px; background: var(--text-primary); transition: 0.3s; }
-
-      /* --- HERO SECTION --- */
-      .hero {
-        padding-top: 180px; /* Space for sticky header */
-        padding-bottom: 120px;
-        min-height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .hero-intro {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 40px;
-      }
-
-      .hero-avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 1px solid var(--border-color);
-      }
-      
-      .hero-intro p {
-        font-size: 16px;
-        font-weight: 500;
-        color: var(--text-secondary);
-      }
-
-      .hero h1 { margin-bottom: 48px; max-width: 1200px; }
-      .hero h1 span { color: var(--text-tertiary); font-style: italic; font-weight: 400; }
-
-      .hero-bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      @media (min-width: 768px) {
-        .hero-bottom {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: flex-end;
-        }
-      }
-
-      .hero-desc {
-        max-width: 480px;
-        font-size: 18px;
-        color: var(--text-secondary);
-        line-height: 1.6;
-      }
-
-      .btn-primary {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px 32px;
-        background: var(--text-primary);
-        color: var(--surface-color);
-        border-radius: var(--radius-pill);
-        font-weight: 500;
-        font-size: 15px;
-        transition: all 0.4s var(--ease-out-expo);
-      }
-
-      .btn-primary:hover {
-        transform: scale(1.03) translateY(-2px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-      }
-
-      /* --- PROJECTS SECTION --- */
-      .projects-section { padding: 120px 0; }
-      
-      .projects-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 60px;
-      }
-
-      .view-all {
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--text-secondary);
-        border-bottom: 1px solid var(--text-secondary);
-        padding-bottom: 4px;
-        transition: color 0.3s, border-color 0.3s;
-      }
-      .view-all:hover { color: var(--text-primary); border-color: var(--text-primary); }
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      @media (min-width: 1024px) {
-        .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 60px 40px; }
-        .projects-grid .project-card:nth-child(even) { margin-top: 80px; } /* Asymmetric layout */
-      }
-
-      .project-card {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        group;
-      }
-
-      .project-img-wrap {
-        width: 100%;
-        aspect-ratio: 4/3;
-        border-radius: var(--radius-md);
-        overflow: hidden;
-        background: var(--surface-alt);
-        position: relative;
-        border: 1px solid var(--border-color);
-      }
-
-      .project-img-wrap img {
-        width: 100%;
-        height: 100%;
-        transition: transform 0.8s var(--ease-out-expo);
-      }
-
-      .project-card:hover .project-img-wrap img { transform: scale(1.05); }
-
-      /* Floating Arrow on Hover */
-      .project-arrow {
-        position: absolute;
-        top: 24px; right: 24px;
-        width: 48px; height: 48px;
-        background: var(--surface-color);
-        border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        opacity: 0;
-        transform: translate(-10px, 10px);
-        transition: all 0.5s var(--ease-out-expo);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      }
-      .project-card:hover .project-arrow {
-        opacity: 1; transform: translate(0, 0);
-      }
-
-      .project-info {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .project-info h3 { font-size: 28px; font-weight: 500; letter-spacing: -0.02em; }
-      .project-info p { font-size: 15px; color: var(--text-secondary); max-width: 400px; }
-
-      .tags { display: flex; gap: 8px; flex-wrap: wrap; }
-      .tags span {
-        padding: 6px 14px;
-        border: 1px solid var(--border-color);
-        border-radius: var(--radius-pill);
-        font-size: 11px;
-        font-weight: 500;
-        color: var(--text-secondary);
-      }
-
-      /* --- EXPERIENCE SECTION --- */
-      .exp-section { padding: 120px 0; border-top: 1px solid var(--border-color); }
-      
-      .exp-list {
-        margin-top: 60px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .exp-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 40px 0;
-        border-bottom: 1px solid var(--border-color);
-        transition: padding 0.4s var(--ease-out-expo);
-      }
-
-      .exp-row:first-child { border-top: 1px solid var(--border-color); }
-
-      @media (min-width: 768px) {
-        .exp-row { grid-template-columns: 1fr 2fr 1fr; align-items: baseline; }
-        .exp-row:hover { padding-left: 24px; padding-right: 24px; background: var(--surface-color); border-radius: 12px; border-color: transparent;}
-      }
-
-      .exp-title { font-size: 24px; font-weight: 500; }
-      .exp-desc { color: var(--text-secondary); font-size: 16px; line-height: 1.6; max-width: 500px;}
-      .exp-date { color: var(--text-tertiary); font-family: monospace; font-size: 14px; text-align: left; }
-      @media (min-width: 768px) { .exp-date { text-align: right; } }
-
-      /* --- APPROACH SECTION --- */
-      .approach-section { padding: 120px 0; }
-      
-      .approach-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 60px;
-      }
-
-      @media (min-width: 768px) {
-        .approach-grid { grid-template-columns: repeat(3, 1fr); }
-      }
-
-      .approach-card {
-        background: var(--surface-color);
-        padding: 48px 32px;
-        border-radius: var(--radius-md);
-        border: 1px solid var(--border-color);
-        transition: all 0.4s var(--ease-out-expo);
-      }
-
-      .approach-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        border-color: var(--border-hover);
-      }
-
-      .approach-num {
-        font-family: monospace;
-        font-size: 14px;
-        color: var(--text-tertiary);
-        margin-bottom: 40px;
-        display: block;
-      }
-
-      .approach-card h3 { font-size: 24px; font-weight: 500; margin-bottom: 16px; }
-      .approach-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.6; }
-
-      /* --- ABOUT / CALL TO ACTION --- */
-      .bottom-section { padding: 120px 0 60px; text-align: center; }
-      .bottom-section h2 { margin-bottom: 40px; max-width: 800px; margin-inline: auto; }
-      
-      .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 24px;
-        margin-top: 60px;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--text-secondary);
-      }
-      .contact-info a { transition: color 0.3s; }
-      .contact-info a:hover { color: var(--text-primary); }
-
-      /* --- FOOTER --- */
-      .footer {
-        padding: 40px 0;
-        border-top: 1px solid var(--border-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        font-size: 13px;
-        color: var(--text-tertiary);
-      }
-
-      @media (min-width: 768px) {
-        .footer { flex-direction: row; justify-content: space-between; }
-      }
-
-      /* --- ANIMATIONS (Hardware Accelerated) --- */
-      .reveal {
-        opacity: 0;
-        transform: translateY(60px) scale(0.98);
-        transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
-        will-change: opacity, transform;
-      }
-      
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      /* Mobile Header Adjustments */
-      @media (max-width: 767px) {
-        .site-header {
-          top: 16px;
-          border-radius: 16px;
-          padding: 16px 20px;
-        }
-        .main-nav {
-          position: absolute; top: 100%; left: 0; width: 100%;
-          background: var(--surface-color); border: 1px solid var(--border-color);
-          border-radius: 16px; flex-direction: column; padding: 24px;
-          gap: 24px; opacity: 0; visibility: hidden; transform: translateY(-10px);
-          transition: all 0.4s var(--ease-out-expo);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .main-nav.is-open { opacity: 1; visibility: visible; transform: translateY(12px); }
-        .menu-toggle { display: flex; }
-        .nav-cta { width: 100%; text-align: center; }
-      }
-    </style>
   </head>
 
   <body>
-    <!-- Subtle tactile noise for a premium feel -->
-    <div class="noise-overlay"></div>
-
     <!-- =====================================================
          HEADER
     ====================================================== -->
+
     <header class="site-header">
-      <a href="index.html" class="brand" aria-label="Home">Rohit<span>.</span></a>
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Rohit Bharadva home">
+          Rohit<span>.</span>
+        </a>
 
-      <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
 
-      <nav class="main-nav">
-        <a href="Projects.html">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="AboutMe.html">About</a>
-        <a href="Contact.html" class="nav-cta">Let's talk</a>
-      </nav>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="Projects.html"> Projects </a>
+
+          <a href="#experience"> Experience </a>
+
+          <a href="AboutMe.html"> About </a>
+
+          <a href="Contact.html" class="nav-cta"> Let's talk </a>
+        </nav>
+      </div>
     </header>
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main>
       <!-- =================================================
              HERO
         ================================================== -->
-      <section class="hero container reveal">
-        <div class="hero-intro">
-          <div class="hero-avatar">
-            <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+
+      <section class="hero container">
+        <!-- Hero Top -->
+
+        <div class="hero-top">
+          <!-- Profile -->
+
+          <div class="hero-profile">
+            <div class="hero-profile-image">
+              <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+            </div>
+
+            <div class="hero-profile-info">
+              <h2>Rohit Bharadva</h2>
+
+              <p>UI/UX Designer</p>
+            </div>
           </div>
-          <p>Rohit Bharadva &mdash; UI/UX Designer</p>
         </div>
 
-        <h1 class="display-text">
-          I design digital products that are
-          <span>simple to understand</span> and
-          <span>meaningful to use.</span>
-        </h1>
+        <!-- Hero Main -->
 
-        <div class="hero-bottom">
-          <p class="hero-desc">
-            I turn complex product problems into clear, intuitive experiences
-            through strategic UX, refined interaction design, and polished
-            editorial interfaces.
-          </p>
-          <a href="#work" class="btn-primary">Explore my work</a>
+        <div class="hero-main">
+          <h1>
+            I design digital products that are
+            <span> simple to understand </span>
+            and
+            <span> meaningful to use. </span>
+          </h1>
+
+          <div class="hero-bottom">
+            <p class="hero-description">
+              I turn complex product problems into clear, intuitive experiences
+              through thoughtful UX, interaction design, and polished
+              interfaces.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#work" class="button button-primary"> View my work </a>
+
+              <a href="AboutMe.html" class="text-link"> About me </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Footer -->
+
+        <div class="hero-footer">
+          <span> UI/UX </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Web & Mobile </span>
+
+          <span class="hero-divider"> / </span>
+
+          <span> Product Design </span>
+
+          <span class="hero-scroll"> Scroll to explore ↓ </span>
         </div>
       </section>
 
       <!-- =================================================
              PROJECTS
         ================================================== -->
-      <section class="projects-section container" id="work">
-        <div class="projects-header reveal">
+      <section class="work-section container" id="work">
+        <div class="section-heading">
           <div>
-            <span class="tagline">Selected Work</span>
-            <h2 class="section-heading">Featured Projects</h2>
+            <p class="eyebrow">Selected work</p>
+            <h2>Projects</h2>
           </div>
-          <a href="Projects.html" class="view-all">View all work</a>
+
+          <!-- Yeh link perfectly aapko Projects.html page par le jayega -->
+          <a href="Projects.html" class="text-link"> View all work </a>
         </div>
 
-        <div class="projects-grid">
+        <!-- Project Grid -->
+        <div class="featured-work">
           <!-- Project 01: Mealora -->
-          <a href="CaseStudy.html?project=mealora" class="project-card reveal">
-            <div class="project-img-wrap">
+          <!-- URL mein ?project=mealora add kiya gaya hai -->
+          <a href="CaseStudy.html?project=mealora" class="featured-card">
+            <div class="project-visual">
               <img src="images/Mealora.png" alt="Mealora project" />
-              <div class="project-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </div>
             </div>
             <div class="project-info">
-              <div class="tags">
-                <span>Grocery</span><span>App Design</span>
+              <div>
+                <span class="project-number">01</span>
+                <h3>Mealora</h3>
+                <p>Smart grocery shopping and meal planning experience.</p>
               </div>
-              <h3>Mealora</h3>
-              <p>Smart grocery shopping and seamless meal planning experience.</p>
+            </div>
+            <div class="project-tags">
+              <span>Grocery management</span>
+              <span>Shopping</span>
             </div>
           </a>
 
           <!-- Project 02: Car Rental -->
-          <a href="CaseStudy.html?project=car-rental" class="project-card reveal">
-            <div class="project-img-wrap">
+          <a href="CaseStudy.html?project=car-rental" class="featured-card">
+            <div class="project-visual">
               <img src="images/Car app.png" alt="Car app project" />
-              <div class="project-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </div>
             </div>
             <div class="project-info">
-              <div class="tags">
-                <span>Automotive</span><span>Mobile</span>
+              <div>
+                <span class="project-number">02</span>
+                <h3>Car Rental app</h3>
+                <p>
+                  A seamless car rental experience with real-time availability.
+                </p>
               </div>
-              <h3>Car Rental</h3>
-              <p>A frictionless car rental experience with real-time availability tracking.</p>
+            </div>
+            <div class="project-tags">
+              <span>Car Rental</span>
+              <span>Mobile</span>
             </div>
           </a>
 
           <!-- Project 03: Fitness Buddy -->
-          <a href="CaseStudy.html?project=fitness-buddy" class="project-card reveal">
-            <div class="project-img-wrap">
-              <img src="images/Fitness buddy.png" alt="Fitness project" />
-              <div class="project-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </div>
+          <a href="CaseStudy.html?project=fitness-buddy" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Fitness buddy.png" alt="Fitness buddy project" />
             </div>
             <div class="project-info">
-              <div class="tags">
-                <span>Health & Fitness</span><span>Data Visualization</span>
+              <div>
+                <span class="project-number">03</span>
+                <h3>Fitness Buddy</h3>
+                <p>
+                  A fitness companion app for personalized workouts and meal
+                  planning.
+                </p>
               </div>
-              <h3>Fitness Buddy</h3>
-              <p>A companion app for personalized workouts and actionable health insights.</p>
+            </div>
+            <div class="project-tags">
+              <span>Fitness</span>
+              <span>Health</span>
             </div>
           </a>
 
           <!-- Project 04: Collab Bro -->
-          <a href="CaseStudy.html?project=collab-bro" class="project-card reveal">
-            <div class="project-img-wrap">
-              <img src="images/Collab bro.png" alt="Collab Bro project" />
-              <div class="project-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </div>
+          <a href="CaseStudy.html?project=collab-bro" class="featured-card">
+            <div class="project-visual">
+              <img src="images/Collab bro.png" alt="Collab bro project" />
             </div>
             <div class="project-info">
-              <div class="tags">
-                <span>Platform</span><span>Marketing</span>
+              <div>
+                <span class="project-number">04</span>
+                <h3>Collab Bro.</h3>
+                <p>
+                  Collaborative platform for brands and influencers to connect
+                  and collaborate.
+                </p>
               </div>
-              <h3>Collab Bro.</h3>
-              <p>A collaborative dashboard for brands and influencers to connect.</p>
+            </div>
+            <div class="project-tags">
+              <span>Collaboration</span>
+              <span>Influencer Marketing</span>
             </div>
           </a>
         </div>
       </section>
 
       <!-- =====================================================
-             EXPERIENCE
+             EXPERIENCE SECTION
         ====================================================== -->
-      <section class="exp-section container" id="experience">
-        <span class="tagline reveal">Career Path</span>
-        <h2 class="section-heading reveal">Professional Experience</h2>
+      <section class="container exp-section" id="experience">
+        <p class="eyebrow">Experience</p>
+        <h2
+          class="fade-in-up"
+          style="
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 500;
+            margin-bottom: 40px;
+            letter-spacing: -0.03em;
+          "
+        >
+          Professional experience
+        </h2>
 
-        <div class="exp-list">
-          <div class="exp-row reveal">
-            <h3 class="exp-title">UniQual iTech</h3>
-            <p class="exp-desc">UI/UX Designer bridging the gap between comprehensive design systems and interactive frontend execution.</p>
-            <span class="exp-date">Feb 2026 &mdash; Present</span>
+        <div class="exp-card fade-in-up">
+          <div class="exp-role">
+            <h3>UniQual iTech</h3>
+            <span>UI/UX Designer</span>
+            <p
+              style="
+                color: var(--text-secondary);
+                font-size: 15px;
+                margin-top: 12px;
+                max-width: 600px;
+                line-height: 1.6;
+              "
+            >
+              Translating business requirements into highly interactive,
+              user-centric interfaces. Building comprehensive design systems and
+              bridging the gap between UI design and frontend execution.
+            </p>
           </div>
-
-          <div class="exp-row reveal">
-            <h3 class="exp-title">Freelance Designer</h3>
-            <p class="exp-desc">Delivered branding, high-fidelity prototypes, and responsive interfaces for diverse global clients.</p>
-            <span class="exp-date">2024 &mdash; 2026</span>
-          </div>
+          <div class="exp-date">Feb 2026 - Present</div>
         </div>
       </section>
 
       <!-- =================================================
-             APPROACH
+             DESIGN APPROACH
         ================================================== -->
-      <section class="approach-section container" id="approach">
-        <span class="tagline reveal">Methodology</span>
-        <h2 class="section-heading reveal" style="max-width: 900px;">
+
+      <section class="statement-section container" id="approach">
+        <p class="eyebrow">How I think</p>
+
+        <h2>
           Good design isn't just about making things look better.
-          <span style="color: var(--text-tertiary);">It's about making the right things easier.</span>
+
+          <span> It's about making the right things easier. </span>
         </h2>
 
         <div class="approach-grid">
-          <div class="approach-card reveal">
-            <span class="approach-num">01 //</span>
+          <article>
+            <span> 01 </span>
+
             <h3>Understand</h3>
-            <p>I start with the user, business goals, requirements, and constraints before jumping into screens.</p>
-          </div>
 
-          <div class="approach-card reveal">
-            <span class="approach-num">02 //</span>
+            <p>
+              I start with the user, business goals, requirements, and
+              constraints before jumping into screens.
+            </p>
+          </article>
+
+          <article>
+            <span> 02 </span>
+
             <h3>Structure</h3>
-            <p>I turn complex requirements into clear flows, information architecture, and purposeful interactions.</p>
-          </div>
 
-          <div class="approach-card reveal">
-            <span class="approach-num">03 //</span>
+            <p>
+              I turn complex requirements into clear flows, information
+              architecture, and purposeful interactions.
+            </p>
+          </article>
+
+          <article>
+            <span> 03 </span>
+
             <h3>Refine</h3>
-            <p>I iterate through feedback, testing, and meticulous visual refinement to create polished experiences.</p>
-          </div>
+
+            <p>
+              I iterate through feedback, testing, and visual refinement to
+              create polished experiences.
+            </p>
+          </article>
         </div>
       </section>
 
       <!-- =================================================
-             ABOUT & CONTACT (Bottom CTA)
+             ABOUT
         ================================================== -->
-      <section class="bottom-section container reveal">
-        <span class="tagline">Next Steps</span>
-        <h2 class="display-text" style="font-size: clamp(40px, 8vw, 88px);">Let's make something <span style="font-style: italic; color: var(--text-tertiary);">meaningful.</span></h2>
-        
-        <a href="Contact.html" class="btn-primary">Start a conversation</a>
 
-        <div class="contact-info">
-          <a href="mailto:rohitbharadava15@gmail.com">rohitbharadava15@gmail.com</a>
-          <span>&mdash;</span>
-          <a href="https://www.linkedin.com/in/rohit-bharadva-0b0139296" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <section class="about-preview container">
+        <div class="about-image">
+          <img src="images/Hero_image3.jpg" alt="Rohit Bharadva" />
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">A little about me</p>
+
+          <h2>Designer by craft. Product designer by mindset.</h2>
+
+          <p>
+            I enjoy working at the intersection of user needs, business goals,
+            and technology. My work spans UX research, information architecture,
+            interaction design, visual systems, and high-fidelity prototyping.
+          </p>
+
+          <a href="AboutMe.html" class="text-link"> Get to know me </a>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+      <section class="contact-section container">
+        <p class="eyebrow">Have a product in mind?</p>
+
+        <h2>
+          Let's make something
+          <em> meaningful. </em>
+        </h2>
+
+        <a href="Contact.html" class="button button-primary">
+          Start a conversation
+        </a>
+
+        <div class="contact-details">
+          <a href="mailto:rohitbharadava15@gmail.com">
+            rohitbharadava15@gmail.com
+          </a>
+
+          <span> · </span>
+
+          <a
+            href="https://www.linkedin.com/in/rohit-bharadva-0b0139296"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
     </main>
@@ -680,81 +377,21 @@
     <!-- =====================================================
          FOOTER
     ====================================================== -->
-    <footer class="footer container">
-      <span>&copy; <span id="year"></span> Rohit Bharadva. All rights reserved.</span>
-      <span>Designed & built with intention.</span>
+
+    <footer class="site-footer container">
+      <span>
+        ©
+        <span id="year"></span>
+        Rohit Bharadva
+      </span>
+
+      <span> Designed & built with intention. </span>
     </footer>
 
     <!-- =====================================================
-         JAVASCRIPT (Lenis + Observers)
+         JAVASCRIPT
     ====================================================== -->
-    <!-- Lenis Smooth Scroll Library via CDN -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    
-    <script>
-      /* --- Optimized Hardware Accelerated Lenis --- */
-      const lenis = new Lenis({
-        lerp: 0.08, 
-        smoothWheel: true,
-        wheelMultiplier: 1,
-        infinite: false,
-      });
 
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
-
-      /* --- High-Performance Scroll Reveals --- */
-      document.addEventListener("DOMContentLoaded", () => {
-        const revealElements = document.querySelectorAll(".reveal");
-        
-        const observerOptions = {
-            threshold: 0.1, 
-            rootMargin: "0px 0px -20px 0px"
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); 
-                    
-                    // Free up GPU memory after animation completes
-                    setTimeout(() => {
-                        entry.target.style.willChange = 'auto';
-                    }, 1000);
-                }
-            });
-        }, observerOptions);
-
-        revealElements.forEach(el => observer.observe(el));
-        
-        // Instant reveal for above-fold elements
-        setTimeout(() => {
-            revealElements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
-                    el.classList.add("active");
-                    observer.unobserve(el);
-                }
-            });
-        }, 50);
-      });
-
-      /* --- Mobile Navigation --- */
-      const menuToggle = document.querySelector(".menu-toggle");
-      const mainNav = document.querySelector(".main-nav");
-
-      menuToggle.addEventListener("click", () => {
-        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-        menuToggle.setAttribute("aria-expanded", String(!isOpen));
-        mainNav.classList.toggle("is-open");
-      });
-
-      /* --- Dynamic Year --- */
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="Script.js"></script>
   </body>
 </html>
