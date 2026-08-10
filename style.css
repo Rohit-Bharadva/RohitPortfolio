@@ -725,7 +725,7 @@ button {
 
   border-radius: 50%;
 
-  color: var(--text-secondary);
+  color: var(--text-secondary); 
 
   transition:
     background 0.35s var(--ease),
