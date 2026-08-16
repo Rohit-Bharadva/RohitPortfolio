@@ -71,6 +71,7 @@
 }
 html {
   scroll-behavior: auto;
+  overflow-x: hidden; /* Add this line to stop mobile horizontal scroll */
 }
 body {
   background: var(--bg);
