@@ -1,0 +1,531 @@
+/* =========================================================
+   PAGE-SPECIFIC STYLES
+   (loaded after style.css on About / Projects / Case Study / Contact)
+========================================================= */
+
+/* ---------- shared page header ---------- */
+.page-header {
+  padding-top: 60px;
+  padding-bottom: 8px;
+}
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.6vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.page-header p.subtitle {
+  color: var(--ink-2);
+  margin-top: 18px;
+  max-width: 600px;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+.about-hero-section {
+  padding-top: 56px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 52px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .about-hero-section {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+  }
+}
+
+.about-text-left h1 {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.4vw, 60px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.about-text-left p {
+  font-size: 15.5px;
+  color: var(--ink-2);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+.about-text-left .signature {
+  margin-top: 32px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--ink);
+}
+.about-text-left .signature span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 6px;
+}
+
+.about-visual-right {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.about-visual-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 36px;
+  display: block;
+}
+.expertise-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.expertise-list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.expertise-item {
+  display: flex;
+  flex-direction: column;
+  padding: 34px 4px;
+  border-bottom: 1px solid var(--line);
+  transition:
+    padding 0.4s var(--ease),
+    background 0.4s var(--ease);
+}
+@media (min-width: 768px) {
+  .expertise-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.expertise-item:hover {
+  padding-left: 16px;
+  padding-right: 16px;
+  background: var(--surface);
+}
+.exp-left {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.exp-number {
+  font-size: 13px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+.exp-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.4vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.exp-detail {
+  max-width: 380px;
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin-top: 14px;
+}
+@media (min-width: 768px) {
+  .exp-detail {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.about-cta {
+  text-align: center;
+  padding: 70px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* =========================================================
+   PROJECTS PAGE
+========================================================= */
+.projects-header-spacing {
+  padding-top: 56px;
+  padding-bottom: 16px;
+}
+.projects-header-spacing h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.4vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.projects-header-spacing p.subtitle {
+  color: var(--ink-2);
+  margin-top: 16px;
+  max-width: 560px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.projects-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+
+/* =========================================================
+   CASE STUDY PAGE
+========================================================= */
+body.cs-body {
+  position: relative;
+}
+.bg-glow {
+  position: fixed;
+  top: -15%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(
+    circle,
+    rgba(61, 90, 251, 0.06) 0%,
+    transparent 65%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.project-content {
+  display: none;
+  padding-bottom: 100px;
+}
+.cs-hero {
+  padding: 88px 0 56px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cs-tags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.cs-tags span {
+  padding: 8px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+}
+.cs-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6.6vw, 80px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.cs-hero p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.cs-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  padding: 36px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 0 auto 72px;
+  max-width: 980px;
+}
+@media (min-width: 768px) {
+  .cs-meta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.meta-col h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+}
+.meta-col p {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cs-main-visual {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-bottom: 100px;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+.cs-main-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cs-split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 52px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .cs-split-section {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+  }
+  .cs-text-left {
+    position: sticky;
+    top: 110px;
+    align-self: flex-start;
+  }
+}
+.cs-text-left h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+.cs-text-left p {
+  font-size: 15.5px;
+  color: var(--ink-2);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.cs-visual-right {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .cs-visual-right {
+    padding: 12px;
+  }
+}
+.cs-visual-right img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.cs-next {
+  text-align: center;
+  padding-top: 70px;
+  border-top: 1px solid var(--line);
+}
+.cs-next span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+}
+.cs-next h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.6vw, 58px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+  transition: color 0.3s var(--ease);
+}
+.cs-next h2:hover {
+  color: var(--accent);
+}
+
+/* =========================================================
+   CONTACT PAGE — bento grid
+========================================================= */
+.contact-page-header {
+  padding-top: 64px;
+  padding-bottom: 36px;
+  text-align: center;
+}
+.contact-page-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7.6vw, 84px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  line-height: 1.05;
+}
+.contact-page-header h1 span {
+  color: var(--accent);
+}
+.contact-page-header p {
+  color: var(--ink-2);
+  font-size: clamp(15px, 2vw, 17px);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.bento-container {
+  padding-bottom: 110px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.bento-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s var(--ease);
+  text-decoration: none;
+  color: inherit;
+}
+.bento-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.card-email {
+  grid-column: 1/-1;
+  min-height: 260px;
+}
+.card-linkedin {
+  grid-column: 1/2;
+  min-height: 220px;
+}
+.card-location {
+  grid-column: 2/3;
+  min-height: 220px;
+  cursor: default;
+}
+.card-location:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--line);
+}
+
+.bento-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--accent-tint);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto;
+  color: var(--accent);
+  transition: all 0.4s var(--ease);
+}
+.bento-card:hover .bento-icon {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.bento-label {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+.bento-value {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3.6vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  word-break: break-word;
+}
+.card-email .bento-value {
+  font-size: clamp(24px, 4.6vw, 42px);
+}
+.hover-arrow {
+  opacity: 0;
+  transform: translate(-8px, 8px);
+  transition: all 0.4s var(--ease);
+  color: var(--ink-2);
+}
+.bento-card:hover .hover-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  color: var(--accent);
+}
+
+@media (max-width: 767px) {
+  .contact-page-header {
+    padding-top: 36px;
+    padding-bottom: 28px;
+    text-align: left;
+  }
+  .contact-page-header p {
+    margin: 0;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-linkedin,
+  .card-location {
+    grid-column: 1/-1;
+  }
+  .bento-card {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+  }
+  .hover-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+    width: 22px;
+    height: 22px;
+  }
+  .card-email {
+    min-height: 220px;
+  }
+}
