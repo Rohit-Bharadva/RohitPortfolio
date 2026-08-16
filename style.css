@@ -1172,15 +1172,15 @@ mark.hl::after {
   }
   .hero-actions {
     width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
+    flex-direction: row; /* Places them side-by-side */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures they don't break on very narrow screens */
+    gap: 16px;
   }
   .hero-actions .button,
   .hero-actions .text-link {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+    width: auto; /* Lets the buttons shrink to fit their text */
+    justify-content: flex-start;
   }
   .hero-footer {
     flex-wrap: wrap;
