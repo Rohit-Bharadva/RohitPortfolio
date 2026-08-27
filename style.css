@@ -905,6 +905,24 @@ mark.hl::after {
   background: var(--accent-tint);
   box-shadow: var(--shadow-md);
 }
+@media (max-width: 860px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .skills-intro p {
+    max-width: none;
+  }
+}
+@media (max-width: 480px) {
+  .tool-chip {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+  .tool-cloud {
+    gap: 8px;
+  }
+}
 
 /* =========================================================
    ABOUT PREVIEW
