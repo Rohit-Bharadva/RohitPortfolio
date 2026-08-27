@@ -674,7 +674,13 @@ mark.hl::after {
   isolation: isolate;
   z-index: 1;
   will-change: box-shadow;
+}
+/* Higher-specificity rule (two classes) so it always wins over .reveal's
+   transition, regardless of which one is declared later in the file. */
+.featured-card.reveal {
   transition:
+    opacity 0.8s var(--ease-soft),
+    transform 0.8s var(--ease-soft),
     box-shadow 0.9s var(--ease-soft),
     border-color 0.9s var(--ease-soft);
 }
