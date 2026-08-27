@@ -921,6 +921,55 @@ mark.hl::after {
 }
 
 /* =========================================================
+   SKILLS & TOOLS
+========================================================= */
+.skills-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+.skills-intro p {
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 380px;
+}
+.tool-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-2);
+  cursor: default;
+  will-change: transform;
+  transition:
+    border-color 0.35s var(--ease),
+    color 0.35s var(--ease),
+    background 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+.tool-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: var(--accent-tint);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================================
    ABOUT PREVIEW
 ========================================================= */
 .about-preview {
