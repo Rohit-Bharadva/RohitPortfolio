@@ -10,8 +10,8 @@
 }
 .page-header h1 {
   font-family: var(--font-display);
-  font-size: clamp(38px, 5.6vw, 64px);
-  font-weight: 600;
+  font-size: clamp(34px, 4.8vw, 56px);
+  font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
 }
@@ -43,8 +43,8 @@
 
 .about-text-left h1 {
   font-family: var(--font-display);
-  font-size: clamp(38px, 5.4vw, 60px);
-  font-weight: 600;
+  font-size: clamp(34px, 4.6vw, 52px);
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
@@ -133,8 +133,8 @@
 }
 .exp-title {
   font-family: var(--font-display);
-  font-size: clamp(26px, 3.4vw, 34px);
-  font-weight: 600;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 .exp-detail {
@@ -166,8 +166,8 @@
 }
 .projects-header-spacing h1 {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5.4vw, 60px);
-  font-weight: 600;
+  font-size: clamp(34px, 4.6vw, 54px);
+  font-weight: 700;
   letter-spacing: -0.03em;
 }
 .projects-header-spacing p.subtitle {
@@ -236,8 +236,8 @@ body.cs-body {
 }
 .cs-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(42px, 6.6vw, 80px);
-  font-weight: 600;
+  font-size: clamp(38px, 5.6vw, 68px);
+  font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
   margin-bottom: 20px;
@@ -273,7 +273,7 @@ body.cs-body {
 }
 .meta-col p {
   font-size: 15.5px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
 }
 
@@ -312,8 +312,8 @@ body.cs-body {
 }
 .cs-text-left h2 {
   font-family: var(--font-display);
-  font-size: clamp(28px, 3.6vw, 42px);
-  font-weight: 600;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 22px;
 }
@@ -360,8 +360,8 @@ body.cs-body {
 }
 .cs-next h2 {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5.6vw, 58px);
-  font-weight: 600;
+  font-size: clamp(32px, 4.8vw, 50px);
+  font-weight: 700;
   letter-spacing: -0.03em;
   cursor: pointer;
   transition: color 0.3s var(--ease);
@@ -380,8 +380,8 @@ body.cs-body {
 }
 .contact-page-header h1 {
   font-family: var(--font-display);
-  font-size: clamp(44px, 7.6vw, 84px);
-  font-weight: 600;
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 18px;
   line-height: 1.05;
@@ -468,15 +468,15 @@ body.cs-body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--ink-3);
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 36px;
   margin-bottom: 8px;
   font-family: var(--font-mono);
 }
 .bento-value {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3.6vw, 32px);
-  font-weight: 600;
+  font-size: clamp(20px, 3.2vw, 28px);
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
   display: flex;
@@ -485,7 +485,7 @@ body.cs-body {
   word-break: break-word;
 }
 .card-email .bento-value {
-  font-size: clamp(24px, 4.6vw, 42px);
+  font-size: clamp(22px, 3.8vw, 36px);
 }
 .hover-arrow {
   opacity: 0;
