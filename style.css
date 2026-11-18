@@ -1314,11 +1314,6 @@ mark.hl::after {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  #cursor-ring,
-  #cursor-dot,
-  #cursor-label {
-    display: none !important;
-  }
 }
 
 /* Lenis base */
