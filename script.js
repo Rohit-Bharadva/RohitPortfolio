@@ -34,24 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- 4. Live tenure counter (since Feb 2026) ---------- */
-  const tenureEls = document.querySelectorAll("[data-tenure-since]");
-  tenureEls.forEach((el) => {
-    const start = new Date(el.getAttribute("data-tenure-since"));
-    const today = new Date();
-    let months = (today.getFullYear() - start.getFullYear()) * 12 + (today.getMonth() - start.getMonth());
-    if (today.getDate() < start.getDate()) months--;
-    if (months < 1) {
-      el.textContent = "Just started";
-    } else if (months < 12) {
-      el.textContent = `${months} mo${months === 1 ? "" : "s"} in the role`;
-    } else {
-      const y = Math.floor(months / 12);
-      const m = months % 12;
-      el.textContent = `${y} yr${y === 1 ? "" : "s"}${m ? " " + m + " mo" : ""} in the role`;
-    }
-  });
-
   /* ---------- 5. Lenis smooth scroll ---------- */
   if (typeof Lenis !== "undefined" && !reduceMotion) {
     const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, wheelMultiplier: 1 });
