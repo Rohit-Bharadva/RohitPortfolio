@@ -55,10 +55,9 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-soft: cubic-bezier(0.16, 0.84, 0.44, 1);
 
-  --font-display: "Bricolage Grotesque", "Inter", sans-serif;
-  --font-body:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "Manrope", sans-serif;
 }
 
 /* =========================================================
@@ -145,75 +144,6 @@ body::before {
   background: var(--accent);
   z-index: 2001;
   transition: width 0.08s linear;
-}
-
-/* =========================================================
-   CURSOR (fine-pointer only, added via JS)
-========================================================= */
-#cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 2002;
-  transition:
-    width 0.25s var(--ease),
-    height 0.25s var(--ease),
-    border-color 0.25s var(--ease),
-    background 0.25s var(--ease);
-  mix-blend-mode: normal;
-}
-#cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  background: var(--ink);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 2003;
-}
-#cursor-label {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, 18px);
-  background: var(--ink);
-  color: var(--white);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  padding: 5px 10px;
-  border-radius: var(--radius-pill);
-  pointer-events: none;
-  z-index: 2002;
-  opacity: 0;
-  white-space: nowrap;
-  transition: opacity 0.2s var(--ease);
-}
-html.has-cursor #cursor-ring.is-active {
-  width: 56px;
-  height: 56px;
-  border-color: var(--accent);
-  background: rgba(61, 90, 251, 0.08);
-}
-html.has-cursor a,
-html.has-cursor button,
-html.has-cursor .cursor-none {
-  cursor: none;
-}
-@media (pointer: coarse) {
-  #cursor-ring,
-  #cursor-dot,
-  #cursor-label {
-    display: none !important;
-  }
 }
 
 /* =========================================================
